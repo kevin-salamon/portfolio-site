@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import About from './components/About/About.js';
 import Experience from './components/Experience/Experience.js';
+import Sidebar from './components/Sidebar/Sidebar.js';
+import Header from './components/Header/Header.js';
 
 const StyledAppPage = styled.div`
   width: 100vw;
@@ -22,6 +24,8 @@ const StyledAppPage = styled.div`
 function App() {
   return (
     <StyledAppPage>
+      <Header/>
+      <Sidebar/>
       <About/>
       <Experience/>
     </StyledAppPage>
