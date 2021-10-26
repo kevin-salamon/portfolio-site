@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledExperience = styled.div`
-    height: 0px;
+    height: 100%;
     width: 100%;
-    background-color: red;
+    background-color: transparent;
 `;
 
 function Experience() {

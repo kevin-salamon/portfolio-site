@@ -5,7 +5,6 @@ import { Download } from 'react-feather';
 const StyledHeader = styled.div`
     height: 80px;
     width: 100vw;
-    background-color: #EDB183;
     position: fixed;
     left: 0;
     top: 0;
@@ -17,7 +16,7 @@ const StyledHeader = styled.div`
     .navigation-container {
         width: min-content;
         height: 70%;
-        margin-right: 10px;
+        margin-right: 50px;
         display: flex;
         justify-content: flex-end;
         align-items: center;
@@ -28,11 +27,23 @@ const StyledHeader = styled.div`
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #480355;
             margin: 0px 10px 0px 10px;
+            cursor: pointer;
+
+            span {
+                margin-block: 0px;
+                color: #B2FFD6;
+                font-family: 'Space Mono', monospace;
+                color: white;
+                user-select: none;
+            }
 
             p {
+                font-size: 13px;
                 margin-block: 0px;
+                color: #B2FFD6;
+                font-family: 'Space Mono', monospace;
+                user-select: none;
             }
 
             .download {
@@ -54,6 +65,8 @@ const StyledHeader = styled.div`
                     padding-left: 2px;
 
                     p {
+                        font-size: 14px;
+                        margin-block: 0px;
                         color: #B2FFD6;
                         font-family: 'Space Mono', monospace;
                     }
@@ -98,16 +111,16 @@ function Header() {
                     </div>
                 </div>
                 <div className='nav-box'>
-                    
+                    <p><span>1. </span>About Me</p>
                 </div>
                 <div className='nav-box'>
-                
+                    <p><span>2. </span>Experience</p>
                 </div>
                 <div className='nav-box'>
-                
+                    <p><span>3. </span>Portfolio</p>
                 </div>
                 <div className='nav-box'>
-                
+                    <p><span>4. </span>Contact Me</p>
                 </div>
             </div>
         </StyledHeader>

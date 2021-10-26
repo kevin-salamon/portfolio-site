@@ -1,18 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const StyledAbout = styled.div`
+const StyledPortfolio = styled.div`
     height: 100%;
     width: 100%;
     background-color: transparent;
 `;
 
-function About() {
+function Portfolio() {
     return (
-        <StyledAbout>
+        <StyledPortfolio>
 
-        </StyledAbout>
+        </StyledPortfolio>
     );
 }
   
-export default About;
+export default Portfolio;
