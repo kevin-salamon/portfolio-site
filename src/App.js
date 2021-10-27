@@ -29,7 +29,7 @@ const StyledSectionContainer = styled.div`
 
   .content-container {
     position: absolute;
-    background-color: white;
+    // background-color: white;
     left: 100px;
     width: calc(100% - 100px);
     top: 80px;

@@ -21,6 +21,23 @@ const StyledHeader = styled.div`
         justify-content: flex-end;
         align-items: center;
 
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            margin: 0px;
+            padding: 0px;
+            width: 120px;
+            height: 100%;
+            margin: 0px 10px 0px 10px;
+            text-decoration: none;
+
+            .nav-box {
+                margin: 0px;
+            }
+        }
+
         .nav-box {
             width: 120px;
             height: 100%;
@@ -100,16 +117,18 @@ function Header() {
     return (
         <StyledHeader>
             <div className='navigation-container'>
-                <div className='nav-box'>
-                    <div className='download'>
-                        <div className='text'>
-                            <p>Resume</p>
-                        </div>
-                        <div className='icon'>
-                            <Download />
+                <a href="https://docs.google.com/document/d/1-ZYgfoqER74Fhof5RPg1xxSGk43QATLV/edit?usp=sharing&ouid=114648167818125791159&rtpof=true&sd=true" target="#">
+                    <div className='nav-box'>
+                        <div className='download'>
+                            <div className='text'>
+                                <p>Resume</p>
+                            </div>
+                            <div className='icon'>
+                                <Download />
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
                 <div className='nav-box'>
                     <p><span>1. </span>About Me</p>
                 </div>
