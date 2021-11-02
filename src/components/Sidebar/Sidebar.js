@@ -44,6 +44,11 @@ const StyledSidebar = styled.div`
                     align-items: center;
                     height: 30px;
                     width: 30px;
+                    transition: 0.2s ease all;
+
+                    &:hover {
+                        transform: scale(1.2, 1.2); 
+                    }
 
                     svg {
                         height: 100%;

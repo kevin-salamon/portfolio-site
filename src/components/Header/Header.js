@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Download } from 'react-feather';
 
@@ -38,7 +38,7 @@ const StyledHeader = styled.div`
             }
         }
 
-        .nav-box {
+        .nav-box, .download-box {
             width: 120px;
             height: 100%;
             display: flex;
@@ -46,6 +46,29 @@ const StyledHeader = styled.div`
             align-items: center;
             margin: 0px 10px 0px 10px;
             cursor: pointer;
+
+            .hover-box {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: 0.5s ease all;
+
+                &.about {
+                    border-bottom: ${props => props.hovered === 'about' ? `1px solid #B2FFD6` : `1px solid transparent`};
+                }
+        
+                &.experience {
+                    border-bottom: ${props => props.hovered === 'experience' ? `1px solid #B2FFD6` : `1px solid transparent`};
+                }
+        
+                &.portfolio {
+                    border-bottom: ${props => props.hovered === 'portfolio' ? `1px solid #B2FFD6` : `1px solid transparent`};
+                }
+        
+                &.contact {
+                    border-bottom: ${props => props.hovered === 'contact' ? `1px solid #B2FFD6` : `1px solid transparent`};
+                }
+            }
 
             span {
                 margin-block: 0px;
@@ -64,14 +87,16 @@ const StyledHeader = styled.div`
             }
 
             .download {
-                width: 90%;
-                height: 80%;
-                border-radius: 8px;
+                width: 100%;
+                height: 100%;
+                border-radius: 3px;
                 border: 2px solid #B2FFD6;
                 cursor: pointer;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                background-color: ${props => props.hovered === 'download' ? `#B2FFD6` : `transparent`};
+                transition: 0.5s ease all;
 
                 .text {
                     display: flex;
@@ -84,7 +109,7 @@ const StyledHeader = styled.div`
                     p {
                         font-size: 14px;
                         margin-block: 0px;
-                        color: #B2FFD6;
+                        color: ${props => props.hovered === 'download' ? `#202121` : `#B2FFD6`};
                         font-family: 'Space Mono', monospace;
                     }
                 }
@@ -100,7 +125,7 @@ const StyledHeader = styled.div`
                     svg {
                         height: 20px;
                         width: 20px;
-                        stroke: #B2FFD6;
+                        stroke: ${props => props.hovered === 'download' ? `#202121` : `#B2FFD6`};
                         stroke-width: 2;
                         stroke-linecap: round;
                         stroke-linejoin: round;
@@ -109,38 +134,50 @@ const StyledHeader = styled.div`
                 }
             }
         }
+
+        .download-box {
+            height: 35px;
+        }
     }
 `;
 
 function Header() {
 
+    const [hovered, setHovered] = useState('');
+
     return (
-        <StyledHeader>
+        <StyledHeader hovered={hovered}>
             <div className='navigation-container'>
-                <a href="https://docs.google.com/document/d/1-ZYgfoqER74Fhof5RPg1xxSGk43QATLV/edit?usp=sharing&ouid=114648167818125791159&rtpof=true&sd=true" target="#">
-                    <div className='nav-box'>
-                        <div className='download'>
-                            <div className='text'>
-                                <p>Resume</p>
-                            </div>
-                            <div className='icon'>
-                                <Download />
-                            </div>
+                <div className='nav-box' onPointerEnter={() => setHovered('about')} onPointerLeave={() => setHovered('')}>
+                    <div className='hover-box about'>
+                        <p><span>1. </span>About Me</p>
+                    </div>
+                </div>
+                <div className='nav-box' onPointerEnter={() => setHovered('experience')} onPointerLeave={() => setHovered('')}>
+                    <div className='hover-box experience'>
+                        <p><span>2. </span>Experience</p>
+                    </div>
+                </div>
+                <div className='nav-box' onPointerEnter={() => setHovered('portfolio')} onPointerLeave={() => setHovered('')}>
+                    <div className='hover-box portfolio'>
+                        <p><span>3. </span>Portfolio</p>
+                    </div>
+                </div>
+                <div className='nav-box' onPointerEnter={() => setHovered('contact')} onPointerLeave={() => setHovered('')}>
+                    <div className='hover-box contact'>
+                        <p><span>4. </span>Contact Me</p>
+                    </div>
+                </div>
+                <a href="https://docs.google.com/document/d/1-ZYgfoqER74Fhof5RPg1xxSGk43QATLV/edit?usp=sharing&ouid=114648167818125791159&rtpof=true&sd=true" target="#" className='download-box'>
+                    <div className='download' onPointerEnter={() => setHovered('download')} onPointerLeave={() => setHovered('')}>
+                        <div className='text'>
+                            <p>Resume</p>
+                        </div>
+                        <div className='icon'>
+                            <Download />
                         </div>
                     </div>
                 </a>
-                <div className='nav-box'>
-                    <p><span>1. </span>About Me</p>
-                </div>
-                <div className='nav-box'>
-                    <p><span>2. </span>Experience</p>
-                </div>
-                <div className='nav-box'>
-                    <p><span>3. </span>Portfolio</p>
-                </div>
-                <div className='nav-box'>
-                    <p><span>4. </span>Contact Me</p>
-                </div>
             </div>
         </StyledHeader>
     );
