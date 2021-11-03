@@ -21,23 +21,6 @@ const StyledHeader = styled.div`
         justify-content: flex-end;
         align-items: center;
 
-        a {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            margin: 0px;
-            padding: 0px;
-            width: 120px;
-            height: 100%;
-            margin: 0px 10px 0px 10px;
-            text-decoration: none;
-
-            .nav-box {
-                margin: 0px;
-            }
-        }
-
         .nav-box, .download-box {
             width: 120px;
             height: 100%;
@@ -46,6 +29,7 @@ const StyledHeader = styled.div`
             align-items: center;
             margin: 0px 10px 0px 10px;
             cursor: pointer;
+            text-decoration: none;
 
             .hover-box {
                 display: flex;
@@ -148,26 +132,26 @@ function Header() {
     return (
         <StyledHeader hovered={hovered}>
             <div className='navigation-container'>
-                <div className='nav-box' onPointerEnter={() => setHovered('about')} onPointerLeave={() => setHovered('')}>
+                <a className='nav-box' href="#about" onPointerEnter={() => setHovered('about')} onPointerLeave={() => setHovered('')}>
                     <div className='hover-box about'>
                         <p><span>1. </span>About Me</p>
                     </div>
-                </div>
-                <div className='nav-box' onPointerEnter={() => setHovered('experience')} onPointerLeave={() => setHovered('')}>
+                </a>
+                <a className='nav-box' href="#experience" onPointerEnter={() => setHovered('experience')} onPointerLeave={() => setHovered('')}>
                     <div className='hover-box experience'>
                         <p><span>2. </span>Experience</p>
                     </div>
-                </div>
-                <div className='nav-box' onPointerEnter={() => setHovered('portfolio')} onPointerLeave={() => setHovered('')}>
+                </a>
+                <a className='nav-box' href="#portfolio" onPointerEnter={() => setHovered('portfolio')} onPointerLeave={() => setHovered('')}>
                     <div className='hover-box portfolio'>
                         <p><span>3. </span>Portfolio</p>
                     </div>
-                </div>
-                <div className='nav-box' onPointerEnter={() => setHovered('contact')} onPointerLeave={() => setHovered('')}>
+                </a>
+                <a className='nav-box' onPointerEnter={() => setHovered('contact')} onPointerLeave={() => setHovered('')}>
                     <div className='hover-box contact'>
                         <p><span>4. </span>Contact Me</p>
                     </div>
-                </div>
+                </a>
                 <a href="https://docs.google.com/document/d/1-ZYgfoqER74Fhof5RPg1xxSGk43QATLV/edit?usp=sharing&ouid=114648167818125791159&rtpof=true&sd=true" target="#" className='download-box'>
                     <div className='download' onPointerEnter={() => setHovered('download')} onPointerLeave={() => setHovered('')}>
                         <div className='text'>

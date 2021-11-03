@@ -42,17 +42,17 @@ function App() {
     <StyledAppPage>
       <Header/>
       <Sidebar/>
-      <StyledSectionContainer style={{top: 0}}>
+      <StyledSectionContainer style={{top: 0}} id="about">
         <div className='content-container'>
           <About />
         </div>
       </StyledSectionContainer>
-      <StyledSectionContainer style={{top: '100vh'}}>
+      <StyledSectionContainer style={{top: '100vh'}} id="experience">
         <div className='content-container'>
           <Experience/>
         </div>
       </StyledSectionContainer>
-      <StyledSectionContainer style={{top: '200vh'}}>
+      <StyledSectionContainer style={{top: '200vh'}} id="portfolio">
         <div className='content-container'>
           <Portfolio/>
         </div>

@@ -13,7 +13,6 @@ const StyledAbout = styled.div`
     .about-container {
         height: 100%;
         width: 60%;
-        background-color: red;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -21,7 +20,7 @@ const StyledAbout = styled.div`
         .about-box {
             height: 75%;
             width: 90%;
-            background-color: #32013b;
+            // background-color: #32013b;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -29,13 +28,53 @@ const StyledAbout = styled.div`
 
             div {
                 display: flex;
-                justify-content: center;
+                justify-content: flex-start;
                 align-items: center;
+                width: 100%;
+                padding-left: 10%;
             }
 
-            p {
+            p, span {
                 margin-block: 0px;
                 color: #B2FFD6;
+                font-family: 'Space Mono', monospace;
+                text-align: left;
+            }
+
+            .intro {
+                p {
+                    font-size: 30px;
+                }
+
+                span {
+                    font-size: 72px;
+                    font-family: 'Fredoka One', cursive;
+                    color: white;
+                    text-shadow: 1px 1px 2px #B2FFD6;
+                }
+            }
+
+            .tagline {
+                p {
+                    font-size: 20px;
+                    color: #B2FFD6;
+                }
+
+                span {
+                    font-size: 30px;
+                    color: white;
+                    font-family: 'Fredoka One', cursive;
+                    text-shadow: 1px 1px 1px #B2FFD6;
+                }
+            }
+
+            .description {
+                margin-top: 20px;
+
+                p {
+                    font-size: 16px;
+                    color: white;
+                }
             }
         }
     }
@@ -73,13 +112,16 @@ function About() {
             <div className='about-container'>
                 <div className='about-box'>
                     <div className='intro'>
-
+                        <p>Hi, I'm <span>Kevin Salamon</span></p>
                     </div>
                     <div className='tagline'>
-                        
+                        <p>your friendly neighborhood <span>Software Engineer.</span></p>
                     </div>
                     <div className='description'>
-                        
+                        <p>
+                            I use the React.js web stack, Java + Spring Boot, and cloud computing services like AWS and Firestore to construct polished and comprehensive enterprise software.
+                            I currently work for a lean and lovable SAAS company out in central NJ.
+                        </p>
                     </div>
                 </div>
             </div>
