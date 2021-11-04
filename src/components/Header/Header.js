@@ -12,6 +12,25 @@ const StyledHeader = styled.div`
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    background-color: #191924D9;
+
+    .logo-box {
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        object-fit: contain;
+
+        img {
+            object-fit: contain;
+            height: 100%;
+            width: auto;
+        }
+    }
 
     .navigation-container {
         width: min-content;
@@ -131,6 +150,9 @@ function Header() {
 
     return (
         <StyledHeader hovered={hovered}>
+            <div className='logo-box'>
+
+            </div>
             <div className='navigation-container'>
                 <a className='nav-box' href="#about" onPointerEnter={() => setHovered('about')} onPointerLeave={() => setHovered('')}>
                     <div className='hover-box about'>

@@ -15,10 +15,29 @@ const StyledAppPage = styled.div`
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  background-color: #202121;
+  background-color: #191924;
 
   p {
     margin-block: 0px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+    transition: 0.3 ease all;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #888888;
+    border-radius: 200px;
+    transition: 0.3 ease all;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555555;
   }
 `;
 
