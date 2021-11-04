@@ -82,7 +82,6 @@ const StyledAbout = styled.div`
     .portrait-container {
         height: 100%;
         width: 40%;
-        // background-color: blue;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -101,6 +100,7 @@ const StyledAbout = styled.div`
                 max-height: 100%;
                 object-fit: contain;
                 border-radius: 50%;
+                box-shadow: 0px 0px 16px 2px white;
             }
         }
     }
@@ -120,7 +120,7 @@ function About() {
                     <div className='description'>
                         <p>
                             I use the React.js web stack, Java + Spring Boot, and cloud computing services like AWS and Firestore to construct polished and comprehensive enterprise software.
-                            I currently work for a lean and lovable SAAS company out in central NJ.
+                            I currently work as a developer for a lean and lovable SAAS company out in central NJ.
                         </p>
                     </div>
                 </div>
