@@ -47,10 +47,38 @@ const StyledAbout = styled.div`
                 }
 
                 span {
-                    font-size: 72px;
-                    font-family: 'Fredoka One', cursive;
+                    font-size: 64px;
+                    font-family: 'Merriweather Sans', sans-serif;
                     color: white;
-                    text-shadow: 1px 1px 2px #B2FFD6;
+                    // text-shadow: 1px 1px 2px #B2FFD6;
+                    position: relative;
+
+                    section {
+                        height: 100%;
+                        width: 100%;
+                        position: absolute;
+                        z-index: 1;
+                        background-color: transparent;
+                        top: 0;
+                        right: 0;
+                        border-bottom: 1px solid #FFFFFFBF;
+                        animation-duration: 0.75s;
+                        animation-name: slidein-right;
+                        animation-delay: 1s;
+                        animation-iteration-count: 1;
+                    }
+
+                    @keyframes slidein-right {
+                        from {
+                            opacity: 0;
+                            right: 200%;
+                        }
+
+                        to {
+                            opacity: 1;
+                            right: 0;
+                        }
+                    }
                 }
             }
 
@@ -63,8 +91,36 @@ const StyledAbout = styled.div`
                 span {
                     font-size: 30px;
                     color: white;
-                    font-family: 'Fredoka One', cursive;
-                    text-shadow: 1px 1px 1px #B2FFD6;
+                    font-family: 'Merriweather Sans', sans-serif;
+                    // text-shadow: 1px 1px 1px #B2FFD6;
+                    position: relative;
+
+                    section {
+                        height: 100%;
+                        width: 100%;
+                        position: absolute;
+                        z-index: 1;
+                        background-color: transparent;
+                        top: 0;
+                        left: 0;
+                        border-bottom: 1px solid #FFFFFFBF;
+                        animation-duration: 0.75s;
+                        animation-name: slidein-left;
+                        animation-delay: 1s;
+                        animation-iteration-count: 1;
+                    }
+
+                    @keyframes slidein-left {
+                        from {
+                            opacity: 0;
+                            left: 200%;
+                        }
+
+                        to {
+                            opacity: 1;
+                            left: 0;
+                        }
+                    }
                 }
             }
 
@@ -112,10 +168,10 @@ function About() {
             <div className='about-container'>
                 <div className='about-box'>
                     <div className='intro'>
-                        <p>Hi, I'm <span>Kevin Salamon</span></p>
+                        <p>Hi, I'm <span>Kevin Salamon<section/></span></p>
                     </div>
                     <div className='tagline'>
-                        <p>your friendly neighborhood <span>Software Engineer.</span></p>
+                        <p>your friendly neighborhood <span>Software Engineer.<section/></span></p>
                     </div>
                     <div className='description'>
                         <p>
