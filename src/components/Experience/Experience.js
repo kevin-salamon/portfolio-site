@@ -30,7 +30,7 @@ const StyledExperience = styled.div`
         }
 
         .job {
-            height: 30%;
+            height: 33.33%;
             width: 100%;
             display: flex;
             align-items: center;
@@ -39,8 +39,7 @@ const StyledExperience = styled.div`
             .inner {
                 width: 60%;
                 height: 90%;
-                position: absolute;
-                border: 1px solid white;
+                // position: absolute;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -51,25 +50,55 @@ const StyledExperience = styled.div`
                     align-items: center;
                     justify-content: center;
                     flex-direction: row;
-                    height: 20%;
+                    height: 60px;
                     width: 100%;
                     
                     .name {
                         display: flex;
                         align-items: center;
-                        justify-content: flex-start;
+                        justify-content: center;
+                        flex-direction: column;
                         height: 100%;
                         width: 50%;
-                        background-color: white;
+
+                        div {
+                            height: 50%;
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+
+                            p {
+                                margin-block: 0px;
+                                font-size: 24px;
+                                color: white;
+                                font-family: 'Merriweather Sans', sans-serif;
+                            }
+
+                            span {
+                                margin-block: 0px;
+                                font-size: 18px;
+                                color: white;
+                                font-family: 'Space Mono', monospace;
+                                font-style: italic;
+                            }
+                        }
                     }
 
                     .date {
                         display: flex;
-                        align-items: center;
+                        align-items: flex-start;
                         justify-content: flex-end;
                         height: 100%;
                         width: 50%;
-                        background-color: black;
+
+                        p {
+                            margin-block: 0px;
+                            font-size: 18px;
+                            color: white;
+                            font-family: 'Space Mono', monospace;
+                            font-style: italic;
+                        }
                     }
                 }
 
@@ -77,7 +106,7 @@ const StyledExperience = styled.div`
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    height: 80%;
+                    height: calc(100% - 60px);
                     width: 100%;
                     background-color: yellow;
                 }
@@ -85,20 +114,29 @@ const StyledExperience = styled.div`
         }
 
         .job-one {
+            height: 35%;
+            justify-content: flex-start;
+
             .inner {
-                right: 5%;
+                // right: 5%;
             }
         }
 
         .job-two {
+            height: 30%;
+            justify-content: flex-end;
+
             .inner {
-                right: 22.5%;
+                // right: 22.5%;
             }
         }
 
         .job-three {
+            height: 30%;
+            justify-content: flex-start;
+
             .inner {
-                right: 40%;
+                // right: 40%;
             }
         }
     }
@@ -108,17 +146,22 @@ function Experience() {
     return (
         <StyledExperience>
             <div className='centering-box'>
-                <div className='intro'>
+                {/* <div className='intro'>
                     <p>Experience</p>
-                </div>
+                </div> */}
                 <div className='job job-one'>
                     <div className='inner'>
                         <div className='name-date'>
                             <div className='name'>
-
+                                <div>
+                                    <p>Software Engineer</p>
+                                </div>
+                                <div>
+                                    <span>F2B Services</span>
+                                </div>
                             </div>
                             <div className='date'>
-
+                                <p>August 2020 - Present</p>
                             </div>
                         </div>
                         <div className='description'>
@@ -130,10 +173,15 @@ function Experience() {
                     <div className='inner'>
                         <div className='name-date'>
                             <div className='name'>
-
+                                <div>
+                                    <p>Software Development Tutor</p>
+                                </div>
+                                <div>
+                                    <span>U2, Inc.</span>
+                                </div>
                             </div>
                             <div className='date'>
-
+                                <p>June 2020 - February 2021</p>
                             </div>
                         </div>
                         <div className='description'>
@@ -145,7 +193,12 @@ function Experience() {
                     <div className='inner'>
                         <div className='name-date'>
                             <div className='name'>
-
+                                <div>
+                                    <p></p>
+                                </div>
+                                <div>
+                                    <span></span>
+                                </div>
                             </div>
                             <div className='date'>
 

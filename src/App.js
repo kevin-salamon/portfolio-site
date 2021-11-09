@@ -1,9 +1,11 @@
 import styled from 'styled-components';
-import About from './components/About/About.js';
-import Experience from './components/Experience/Experience.js';
-import Portfolio from './components/Portfolio/Portfolio.js'
-import Sidebar from './components/Sidebar/Sidebar.js';
-import Header from './components/Header/Header.js';
+import About from './components/About';
+import Experience from './components/Experience';
+import Portfolio from './components/Portfolio'
+import Sidebar from './components/Sidebar';
+import Header from './components/Header';
+import store from './store';
+import { Provider } from 'react-redux';
 
 const StyledAppPage = styled.div`
   width: 100vw;
@@ -58,25 +60,27 @@ const StyledSectionContainer = styled.div`
 
 function App() {
   return (
-    <StyledAppPage>
-      <Header/>
-      <Sidebar/>
-      <StyledSectionContainer style={{top: 0}} id="about">
-        <div className='content-container'>
-          <About />
-        </div>
-      </StyledSectionContainer>
-      <StyledSectionContainer style={{top: '100vh'}} id="experience">
-        <div className='content-container'>
-          <Experience/>
-        </div>
-      </StyledSectionContainer>
-      <StyledSectionContainer style={{top: '200vh'}} id="portfolio">
-        <div className='content-container'>
-          <Portfolio/>
-        </div>
-      </StyledSectionContainer>
-    </StyledAppPage>
+    <Provider store={store}>
+      <StyledAppPage>
+        <Header/>
+        <Sidebar/>
+        <StyledSectionContainer style={{top: 0}} id="about">
+          <div className='content-container'>
+            <About />
+          </div>
+        </StyledSectionContainer>
+        <StyledSectionContainer style={{top: '100vh'}} id="experience">
+          <div className='content-container'>
+            <Experience/>
+          </div>
+        </StyledSectionContainer>
+        <StyledSectionContainer style={{top: '200vh'}} id="portfolio">
+          <div className='content-container'>
+            <Portfolio/>
+          </div>
+        </StyledSectionContainer>
+      </StyledAppPage>
+    </Provider>
   );
 }
 
