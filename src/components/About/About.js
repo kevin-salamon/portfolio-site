@@ -131,6 +131,10 @@ const StyledAbout = styled.div`
                     font-size: 16px;
                     color: white;
                 }
+
+                &.after {
+                    margin-top: 10px;
+                }
             }
         }
     }
@@ -177,6 +181,12 @@ function About() {
                         <p>
                             I use the React.js web stack, Java + Spring Boot, and cloud computing services like AWS and Firestore to construct polished and comprehensive enterprise software.
                             I currently work as a developer for a lean and lovable SAAS company out in central NJ.
+                        </p>
+                    </div>
+                    <div className='description after'>
+                        <p>
+                            When not working, you can probably find me listening to a history podcast, brushing up on my Japanese, or getting way too animated about a Penn State football
+                            game.
                         </p>
                     </div>
                 </div>

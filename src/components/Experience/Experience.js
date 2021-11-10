@@ -78,7 +78,7 @@ const StyledExperience = styled.div`
                             span {
                                 margin-block: 0px;
                                 font-size: 18px;
-                                color: white;
+                                color: #B2FFD6;
                                 font-family: 'Space Mono', monospace;
                                 font-style: italic;
                             }
@@ -95,7 +95,7 @@ const StyledExperience = styled.div`
                         p {
                             margin-block: 0px;
                             font-size: 18px;
-                            color: white;
+                            color: #B2FFD6;
                             font-family: 'Space Mono', monospace;
                             font-style: italic;
                         }
@@ -104,40 +104,32 @@ const StyledExperience = styled.div`
 
                 .description {
                     display: flex;
-                    align-items: center;
+                    align-items: flex-start;
                     justify-content: center;
                     height: calc(100% - 60px);
                     width: 100%;
-                    background-color: yellow;
+
+                    p {
+                        margin-block: 0px;
+                        font-size: 20px;
+                        color: white;
+                        font-family: 'Open Sans', sans-serif;
+                        letter-spacing: 0.5px;
+                    }
                 }
             }
         }
 
         .job-one {
-            height: 35%;
             justify-content: flex-start;
-
-            .inner {
-                // right: 5%;
-            }
         }
 
         .job-two {
-            height: 30%;
             justify-content: flex-end;
-
-            .inner {
-                // right: 22.5%;
-            }
         }
 
         .job-three {
-            height: 30%;
             justify-content: flex-start;
-
-            .inner {
-                // right: 40%;
-            }
         }
     }
 `;
@@ -146,9 +138,6 @@ function Experience() {
     return (
         <StyledExperience>
             <div className='centering-box'>
-                {/* <div className='intro'>
-                    <p>Experience</p>
-                </div> */}
                 <div className='job job-one'>
                     <div className='inner'>
                         <div className='name-date'>
@@ -165,7 +154,11 @@ function Experience() {
                             </div>
                         </div>
                         <div className='description'>
-
+                            <p>
+                                In my current position, I work within a small, tight-knit software team. Together we've created and maintained the company's portfolio of sales, training, 
+                                and event products, using technology like React/Redux, Node.js, .NET, AWS, and Firestore/Firebase. At F2B, I've cut my teeth in software,  and continue to learn
+                                more everyday - while making lifelong friends in the process.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -194,7 +187,7 @@ function Experience() {
                         <div className='name-date'>
                             <div className='name'>
                                 <div>
-                                    <p></p>
+                                    <p style={{fontStyle: 'italic'}}>life before software...</p>
                                 </div>
                                 <div>
                                     <span></span>
