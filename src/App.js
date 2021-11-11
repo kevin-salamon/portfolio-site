@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import About from './components/About';
 import Experience from './components/Experience';
@@ -58,11 +59,25 @@ const StyledSectionContainer = styled.div`
   }
 `;
 
-function App() {
+const App = () => {
+  // const scrollRef = useRef();
+  const [scrollDown, setScrollDown] = useState(0);
+
+  // const checkAnimation = () => {
+
+  // }
+
   return (
     <Provider store={store}>
-      <StyledAppPage>
-        <Header/>
+      <StyledAppPage
+        id="top-container"
+        onScroll={() => {
+          let container = document.getElementById('top-container');
+          setScrollDown(container.scrollTop);
+          // checkAnimation();
+        }}
+      >
+        <Header scrollDown={scrollDown}/>
         <Sidebar/>
         <StyledSectionContainer style={{top: 0}} id="about">
           <div className='content-container'>

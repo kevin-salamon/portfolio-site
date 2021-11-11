@@ -105,7 +105,7 @@ const StyledExperience = styled.div`
                 .description {
                     display: flex;
                     align-items: flex-start;
-                    justify-content: center;
+                    justify-content: flex-start;
                     height: calc(100% - 60px);
                     width: 100%;
 
@@ -170,7 +170,7 @@ function Experience() {
                                     <p>Software Development Tutor</p>
                                 </div>
                                 <div>
-                                    <span>U2, Inc.</span>
+                                    <span>2U, Inc.</span>
                                 </div>
                             </div>
                             <div className='date'>
@@ -178,7 +178,11 @@ function Experience() {
                             </div>
                         </div>
                         <div className='description'>
-                            
+                            <p>
+                                While working for 2U, I put my coding self-learning to good use to teach others the joys of software development. On any given week, I would be hosting anywhere
+                                from 1 to 20 hour-long coding tutorial sessions, helping bootcamp students with topics ranging anywhere from basic CSS to SQL, Node.js, or React. 
+                                They say the best way to learn is to teach - and so I learned quite a bit from this role.
+                            </p>
                         </div>
                     </div>
                 </div>

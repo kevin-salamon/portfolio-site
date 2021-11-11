@@ -12,7 +12,8 @@ const StyledHeader = styled.div`
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    background-color: #191924D9;
+    transition: 0.3s ease all;
+    background-color: ${props => props.scrollDown >= 250 ? `#191924D9` : `#19192400`};
 
     .logo-box {
         width: 80px;
@@ -144,12 +145,14 @@ const StyledHeader = styled.div`
     }
 `;
 
-function Header() {
+const Header = ({ 
+    scrollDown 
+}) => {
 
     const [hovered, setHovered] = useState('');
 
     return (
-        <StyledHeader hovered={hovered}>
+        <StyledHeader hovered={hovered} scrollDown={scrollDown}>
             <div className='logo-box'>
 
             </div>
