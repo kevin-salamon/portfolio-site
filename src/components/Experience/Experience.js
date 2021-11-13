@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 
 const StyledExperience = styled.div`
@@ -35,6 +35,7 @@ const StyledExperience = styled.div`
             display: flex;
             align-items: center;
             position: relative;
+            opacity: 0;
 
             .inner {
                 width: 60%;
@@ -118,6 +119,25 @@ const StyledExperience = styled.div`
                     }
                 }
             }
+
+            &.start-animation {
+                animation: 1.25s ease;
+                animation-name: slideup;
+                // animation-delay: 0.5s;
+                animation-iteration-count: 1;
+            }
+
+            @keyframes slideup {
+                from {
+                    opacity: 0;
+                    top: 50%;
+                }
+
+                to {
+                    opacity: 1;
+                    top: 0;
+                }
+            }
         }
 
         .job-one {
@@ -135,10 +155,39 @@ const StyledExperience = styled.div`
 `;
 
 function Experience() {
+
+    const refOne = useRef();
+    const refTwo = useRef();
+    const refThree = useRef();
+
+    useEffect(() => {
+        let topLevelContainer = document.getElementById('top-container');
+        topLevelContainer.addEventListener('scroll', () => {
+            let jobOne = document.getElementById('job-one').getBoundingClientRect().top;
+            let jobTwo = document.getElementById('job-two').getBoundingClientRect().top;
+            let jobThree = document.getElementById('job-three').getBoundingClientRect().top;
+            console.log("JOB 1 RECT", jobOne);
+            // console.log("JOB 2 RECT", jobTwo);
+            // console.log("JOB 3 RECT", jobThree);
+            if (jobOne <= 500) {
+                document.getElementById('job-one').classList.add('start-animation');
+                refOne.current.style.opacity = 1;
+            }
+            if (jobTwo <= 600) {
+                document.getElementById('job-two').classList.add('start-animation');
+                refTwo.current.style.opacity = 1;
+            }
+            if (jobThree <= 700) {
+                document.getElementById('job-three').classList.add('start-animation');
+                refThree.current.style.opacity = 1;
+            }
+        })
+    }, [])
+
     return (
         <StyledExperience>
             <div className='centering-box'>
-                <div className='job job-one'>
+                <div className='job job-one' id="job-one" ref={refOne}>
                     <div className='inner'>
                         <div className='name-date'>
                             <div className='name'>
@@ -162,7 +211,7 @@ function Experience() {
                         </div>
                     </div>
                 </div>
-                <div className='job job-two'>
+                <div className='job job-two' id="job-two" ref={refTwo}>
                     <div className='inner'>
                         <div className='name-date'>
                             <div className='name'>
@@ -186,7 +235,7 @@ function Experience() {
                         </div>
                     </div>
                 </div>
-                <div className='job job-three'>
+                <div className='job job-three' id="job-three" ref={refThree}>
                     <div className='inner'>
                         <div className='name-date'>
                             <div className='name'>

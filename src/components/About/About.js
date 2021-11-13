@@ -167,8 +167,9 @@ const StyledAbout = styled.div`
 `;
 
 function About() {
+
     return (
-        <StyledAbout>
+        <StyledAbout id="about">
             <div className='about-container'>
                 <div className='about-box'>
                     <div className='intro'>
