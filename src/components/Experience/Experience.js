@@ -155,12 +155,13 @@ const StyledExperience = styled.div`
 `;
 
 function Experience() {
-
+    
     const refOne = useRef();
     const refTwo = useRef();
     const refThree = useRef();
 
     useEffect(() => {
+
         let topLevelContainer = document.getElementById('top-container');
         topLevelContainer.addEventListener('scroll', () => {
             let jobOne = document.getElementById('job-one').getBoundingClientRect().top;

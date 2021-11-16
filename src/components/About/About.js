@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import profile from '../../assets/images/profile.jpg';
 
@@ -64,8 +64,9 @@ const StyledAbout = styled.div`
                         border-bottom: 1px solid #FFFFFFBF;
                         animation-duration: 0.75s;
                         animation-name: slidein-right;
-                        animation-delay: 1s;
+                        animation-delay: 0.5s;
                         animation-iteration-count: 1;
+                        opacity: 0;
                     }
 
                     @keyframes slidein-right {
@@ -106,8 +107,9 @@ const StyledAbout = styled.div`
                         border-bottom: 1px solid #FFFFFFBF;
                         animation-duration: 0.75s;
                         animation-name: slidein-left;
-                        animation-delay: 1s;
+                        animation-delay: 0.5s;
                         animation-iteration-count: 1;
+                        opacity: 0;
                     }
 
                     @keyframes slidein-left {
@@ -168,15 +170,25 @@ const StyledAbout = styled.div`
 
 function About() {
 
+    const underlineRefOne = useRef();
+    const underlineRefTwo = useRef();
+
+    useEffect(() => {
+        setTimeout(() => {
+            underlineRefOne.current.style.opacity = 1;
+            underlineRefTwo.current.style.opacity = 1;
+        }, 1000);
+    }, []);
+
     return (
         <StyledAbout id="about">
             <div className='about-container'>
                 <div className='about-box'>
                     <div className='intro'>
-                        <p>Hi, I'm <span>Kevin Salamon<section/></span></p>
+                        <p>Hi, I'm <span>Kevin Salamon<section ref={underlineRefOne}/></span></p>
                     </div>
                     <div className='tagline'>
-                        <p>your friendly neighborhood <span>Software Engineer.<section/></span></p>
+                        <p>your friendly neighborhood <span>Software Engineer.<section ref={underlineRefTwo}/></span></p>
                     </div>
                     <div className='description'>
                         <p>
