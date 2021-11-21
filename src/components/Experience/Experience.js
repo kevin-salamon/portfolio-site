@@ -16,27 +16,7 @@ const StyledExperience = styled.div`
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        opacity: 0;
         position: relative;
-
-        &.start-animation {
-            animation: 1s ease;
-            animation-name: slideup;
-            // animation-delay: 0.5s;
-            animation-iteration-count: 1;
-        }
-
-        @keyframes slideup {
-            from {
-                opacity: 0;
-                top: 50%;
-            }
-
-            to {
-                opacity: 1;
-                top: 0;
-            }
-        }
 
         .intro {
             height: 10%;
@@ -56,6 +36,37 @@ const StyledExperience = styled.div`
             display: flex;
             align-items: center;
             position: relative;
+            opacity: 0;
+
+            &.start-animation {
+                animation: 1s ease;
+                animation-name: slideup;
+                animation-iteration-count: 1;
+
+                &.job-one {
+
+                }
+
+                &.job-two {
+                    animation-delay: 0.1s;
+                }
+
+                &.job-three {
+                    animation-delay: 0.2s;
+                }
+            }
+    
+            @keyframes slideup {
+                from {
+                    opacity: 0;
+                    top: 50%;
+                }
+    
+                to {
+                    opacity: 1;
+                    top: 0;
+                }
+            }
 
             .inner {
                 width: 60%;
@@ -158,24 +169,25 @@ const StyledExperience = styled.div`
 function Experience() {
     
     const refOne = useRef();
+    const refTwo = useRef();
+    const refThree = useRef();
 
     useEffect(() => {
         let topLevelContainer = document.getElementById('top-container');
         topLevelContainer.addEventListener('scroll', () => {
             let jobBox = document.getElementById('job-box').getBoundingClientRect().top;
             if (jobBox <= 500) {
-                document.getElementById('job-box').classList.add('start-animation');
-                setTimeout(() => {
-                    refOne.current.style.opacity = 1;
-                }, 900);
+                document.getElementById('job-one').classList.add('start-animation');
+                document.getElementById('job-two').classList.add('start-animation');
+                document.getElementById('job-three').classList.add('start-animation');
             }
         })
     }, []);
 
     return (
         <StyledExperience>
-            <div className='centering-box' ref={refOne} id='job-box'>
-                <div className='job job-one'>
+            <div className='centering-box' id='job-box'>
+                <div className='job job-one' ref={refOne} id='job-one' onAnimationEnd={() => refOne.current.style.opacity = 1}>
                     <div className='inner'>
                         <div className='name-date'>
                             <div className='name'>
@@ -199,7 +211,7 @@ function Experience() {
                         </div>
                     </div>
                 </div>
-                <div className='job job-two'>
+                <div className='job job-two' ref={refTwo} id='job-two' onAnimationEnd={() => refTwo.current.style.opacity = 1}>
                     <div className='inner'>
                         <div className='name-date'>
                             <div className='name'>
@@ -223,7 +235,7 @@ function Experience() {
                         </div>
                     </div>
                 </div>
-                <div className='job job-three'>
+                <div className='job job-three' id='job-three' ref={refThree} onAnimationEnd={() => refThree.current.style.opacity = 1}>
                     <div className='inner'>
                         <div className='name-date'>
                             <div className='name'>
@@ -235,11 +247,15 @@ function Experience() {
                                 </div>
                             </div>
                             <div className='date'>
-
+                                <p>Before 2018</p>
                             </div>
                         </div>
                         <div className='description'>
-                            
+                            <p>
+                                Surprisingly enough, before I got interested in coding, I was doing legal work - I graduated with a Political Science degree and worked in law firms for
+                                close to two years. The story of that transition is a long one, but the attention to detail I gained from hours of preparing law suits and poring over court
+                                documents has been invaluable in my growth as a software engineer.
+                            </p>
                         </div>
                     </div>
                 </div>

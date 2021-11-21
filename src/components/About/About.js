@@ -173,22 +173,22 @@ function About() {
     const underlineRefOne = useRef();
     const underlineRefTwo = useRef();
 
-    useEffect(() => {
-        setTimeout(() => {
-            underlineRefOne.current.style.opacity = 1;
-            underlineRefTwo.current.style.opacity = 1;
-        }, 1000);
-    }, []);
+    // useEffect(() => {
+    //     setTimeout(() => {
+    //         underlineRefOne.current.style.opacity = 1;
+    //         underlineRefTwo.current.style.opacity = 1;
+    //     }, 1000);
+    // }, []);
 
     return (
         <StyledAbout id="about">
             <div className='about-container'>
                 <div className='about-box'>
                     <div className='intro'>
-                        <p>Hi, I'm <span>Kevin Salamon<section ref={underlineRefOne}/></span></p>
+                        <p>Hi, I'm <span>Kevin Salamon<section ref={underlineRefOne} onAnimationEnd={() => underlineRefOne.current.style.opacity = 1}/></span></p>
                     </div>
                     <div className='tagline'>
-                        <p>your friendly neighborhood <span>Software Engineer.<section ref={underlineRefTwo}/></span></p>
+                        <p>your friendly neighborhood <span>Software Engineer.<section ref={underlineRefTwo} onAnimationEnd={() => underlineRefTwo.current.style.opacity = 1}/></span></p>
                     </div>
                     <div className='description'>
                         <p>
