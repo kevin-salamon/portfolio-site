@@ -14,7 +14,7 @@ const StyledPortfolio = styled.div`
     position: relative;
 `;
 
-const StyledPortfolioItem = styled.div`
+const StyledPortfolioItem = styled.a`
     height: 270px;
     width: 480px;
     margin: 1%;
@@ -27,6 +27,7 @@ const StyledPortfolioItem = styled.div`
     align-items: center;
     position: relative;
     opacity: 0;
+    text-decoration: none;
 
     &.start-animation {
         animation: 0.5s ease;
@@ -80,6 +81,7 @@ const StyledPortfolioItem = styled.div`
         color: #FFFFFF;
         font-size: 36px;
         font-family: 'Space Mono', monospace;
+        text-decoration: none;
     }
 `;
 
@@ -109,22 +111,22 @@ function Portfolio() {
 
     return (
         <StyledPortfolio ref={portRef} id='inner-portfolio' className='check'>
-            <StyledPortfolioItem ref={refOne} id='port-one' className='port-one' onAnimationEnd={() => refOne.current.style.opacity = 1}>
+            <StyledPortfolioItem ref={refOne} id='port-one' className='port-one' onAnimationEnd={() => refOne.current.style.opacity = 1} href="https://github.com/kevin-salamon" target="#">
                 <p>Coming Soon</p>
             </StyledPortfolioItem>
-            <StyledPortfolioItem ref={refTwo} id='port-two' className='port-two' onAnimationEnd={() => refTwo.current.style.opacity = 1}>
+            <StyledPortfolioItem ref={refTwo} id='port-two' className='port-two' onAnimationEnd={() => refTwo.current.style.opacity = 1} href="https://github.com/kevin-salamon" target="#">
                 <p>Coming Soon</p>
             </StyledPortfolioItem>
-            <StyledPortfolioItem ref={refThree} id='port-three' className='port-three' onAnimationEnd={() => refThree.current.style.opacity = 1}> 
+            <StyledPortfolioItem ref={refThree} id='port-three' className='port-three' onAnimationEnd={() => refThree.current.style.opacity = 1} href="https://github.com/kevin-salamon" target="#"> 
                 <p>Coming Soon</p>
             </StyledPortfolioItem>
-            <StyledPortfolioItem ref={refFour} id='port-four' className='port-four' onAnimationEnd={() => refFour.current.style.opacity = 1}>
+            <StyledPortfolioItem ref={refFour} id='port-four' className='port-four' onAnimationEnd={() => refFour.current.style.opacity = 1} href="https://github.com/kevin-salamon" target="#">
                 <p>Coming Soon</p>
             </StyledPortfolioItem>
-            <StyledPortfolioItem ref={refFive} id='port-five' className='port-five' onAnimationEnd={() => refFive.current.style.opacity = 1}>
+            <StyledPortfolioItem ref={refFive} id='port-five' className='port-five' onAnimationEnd={() => refFive.current.style.opacity = 1} href="https://github.com/kevin-salamon" target="#">
                 <p>Coming Soon</p>
             </StyledPortfolioItem>
-            <StyledPortfolioItem ref={refSix} id='port-six' className='port-six' onAnimationEnd={() => refSix.current.style.opacity = 1}>
+            <StyledPortfolioItem ref={refSix} id='port-six' className='port-six' onAnimationEnd={() => refSix.current.style.opacity = 1} href="https://github.com/kevin-salamon" target="#">
                 <p>Coming Soon</p>
             </StyledPortfolioItem>
         </StyledPortfolio>
