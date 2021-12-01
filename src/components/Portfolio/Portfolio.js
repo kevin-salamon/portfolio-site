@@ -29,6 +29,11 @@ const StyledPortfolioItem = styled.a`
     opacity: 0;
     text-decoration: none;
 
+    @media (max-width: 1150px) and (orientation: landscape) {
+        height: 27%;
+        width: 38%;
+    }
+
     &.start-animation {
         animation: 0.5s ease;
         animation-name: slideup;

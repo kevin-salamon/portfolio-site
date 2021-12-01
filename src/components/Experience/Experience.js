@@ -77,6 +77,10 @@ const StyledExperience = styled.div`
                 justify-content: center;
                 flex-direction: column;
 
+                @media (max-width: 1150px) and (orientation: landscape) {
+                    width: 65%;
+                }
+
                 .name-date {
                     display: flex;
                     align-items: center;
@@ -84,6 +88,10 @@ const StyledExperience = styled.div`
                     flex-direction: row;
                     height: 60px;
                     width: 100%;
+
+                    @media (max-width: 1150px) and (orientation: landscape) {
+                        height: 45px;
+                    }
                     
                     .name {
                         display: flex;
@@ -100,11 +108,23 @@ const StyledExperience = styled.div`
                             align-items: center;
                             justify-content: flex-start;
 
+                            @media (max-width: 1150px) and (orientation: landscape) {
+                                align-items: flex-start;
+                            }
+
                             p {
                                 margin-block: 0px;
                                 font-size: 24px;
                                 color: white;
                                 font-family: 'Merriweather Sans', sans-serif;
+
+                                @media (max-width: 1367px) and (orientation: landscape) {
+                                    font-size: 22px;
+                                }
+
+                                @media (max-width: 1150px) and (orientation: landscape) {
+                                    font-size: 18px;
+                                }
                             }
 
                             span {
@@ -113,6 +133,14 @@ const StyledExperience = styled.div`
                                 color: #B2FFD6;
                                 font-family: 'Space Mono', monospace;
                                 font-style: italic;
+
+                                @media (max-width: 1367px) and (orientation: landscape) {
+                                    font-size: 18px;
+                                }
+
+                                @media (max-width: 1150px) and (orientation: landscape) {
+                                    font-size: 14px;
+                                }
                             }
                         }
                     }
@@ -130,6 +158,14 @@ const StyledExperience = styled.div`
                             color: #B2FFD6;
                             font-family: 'Space Mono', monospace;
                             font-style: italic;
+
+                            @media (max-width: 1367px) and (orientation: landscape) {
+                                font-size: 18px;
+                            }
+
+                            @media (max-width: 1150px) and (orientation: landscape) {
+                                font-size: 14px;
+                            }
                         }
                     }
                 }
@@ -147,6 +183,14 @@ const StyledExperience = styled.div`
                         color: white;
                         font-family: 'Open Sans', sans-serif;
                         letter-spacing: 0.5px;
+
+                        @media (max-width: 1367px) and (orientation: landscape) {
+                            font-size: 20px;
+                        }
+
+                        @media (max-width: 1150px) and (orientation: landscape) {
+                            font-size: 13px;
+                        }
                     }
                 }
             }

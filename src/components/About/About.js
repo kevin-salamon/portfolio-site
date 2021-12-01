@@ -26,6 +26,14 @@ const StyledAbout = styled.div`
             align-items: center;
             flex-direction: column;
 
+            @media (max-width: 1367px) and (orientation: landscape) {
+                // width: 80%;
+            }
+
+            @media (max-width: 1150px) and (orientation: landscape) {
+
+            }
+
             div {
                 display: flex;
                 justify-content: flex-start;
@@ -44,6 +52,14 @@ const StyledAbout = styled.div`
             .intro {
                 p {
                     font-size: 30px;
+
+                    @media (max-width: 1367px) and (orientation: landscape) {
+                        // font-size: 24px;
+                    }
+
+                    @media (max-width: 1150px) and (orientation: landscape) {
+                        font-size: 20px;
+                    }
                 }
 
                 span {
@@ -52,6 +68,14 @@ const StyledAbout = styled.div`
                     color: white;
                     // text-shadow: 1px 1px 2px #B2FFD6;
                     position: relative;
+
+                    @media (max-width: 1367px) and (orientation: landscape) {
+                        // font-size: 51px;
+                    }
+
+                    @media (max-width: 1150px) and (orientation: landscape) {
+                        font-size: 44px;
+                    }
 
                     section {
                         height: 100%;
@@ -87,6 +111,14 @@ const StyledAbout = styled.div`
                 p {
                     font-size: 20px;
                     color: #B2FFD6;
+
+                    @media (max-width: 1367px) and (orientation: landscape) {
+                        // font-size: 16px;
+                    }
+
+                    @media (max-width: 1150px) and (orientation: landscape) {
+                        font-size: 16px;
+                    }
                 }
 
                 span {
@@ -95,6 +127,14 @@ const StyledAbout = styled.div`
                     font-family: 'Merriweather Sans', sans-serif;
                     // text-shadow: 1px 1px 1px #B2FFD6;
                     position: relative;
+
+                    @media (max-width: 1367px) and (orientation: landscape) {
+                        // font-size: 24px;
+                    }
+
+                    @media (max-width: 1150px) and (orientation: landscape) {
+                        font-size: 24px;
+                    }
 
                     section {
                         height: 100%;
@@ -132,6 +172,14 @@ const StyledAbout = styled.div`
                 p {
                     font-size: 16px;
                     color: white;
+
+                    @media (max-width: 1367px) and (orientation: landscape) {
+                        font-size: 14px;
+                    }
+
+                    @media (max-width: 1150px) and (orientation: landscape) {
+                        font-size: 13px;
+                    }
                 }
 
                 &.after {
@@ -156,6 +204,11 @@ const StyledAbout = styled.div`
             align-items: center;
             object-fit: contain;
 
+            @media (max-width: 1367px) and (orientation: landscape) {
+                width: 40%;
+                height: 40%;
+            }
+
             img {
                 height: 100%;
                 width: auto;
@@ -174,10 +227,7 @@ function About() {
     const underlineRefTwo = useRef();
 
     // useEffect(() => {
-    //     setTimeout(() => {
-    //         underlineRefOne.current.style.opacity = 1;
-    //         underlineRefTwo.current.style.opacity = 1;
-    //     }, 1000);
+        
     // }, []);
 
     return (
