@@ -81,6 +81,10 @@ const StyledExperience = styled.div`
                     width: 65%;
                 }
 
+                @media (orientation: portrait) {
+                    width: 80%;
+                }
+
                 .name-date {
                     display: flex;
                     align-items: center;
@@ -100,6 +104,10 @@ const StyledExperience = styled.div`
                         flex-direction: column;
                         height: 100%;
                         width: 50%;
+
+                        @media (orientation: portrait) {
+                            width: 60%;
+                        }
 
                         div {
                             height: 50%;
@@ -125,6 +133,10 @@ const StyledExperience = styled.div`
                                 @media (max-width: 1150px) and (orientation: landscape) {
                                     font-size: 18px;
                                 }
+
+                                @media (orientation: portrait) and (max-width: 950px) {
+                                    font-size: 18px;
+                                }
                             }
 
                             span {
@@ -141,6 +153,10 @@ const StyledExperience = styled.div`
                                 @media (max-width: 1150px) and (orientation: landscape) {
                                     font-size: 14px;
                                 }
+
+                                @media (orientation: portrait) and (max-width: 950px) {
+                                    font-size: 16px;
+                                }
                             }
                         }
                     }
@@ -151,6 +167,10 @@ const StyledExperience = styled.div`
                         justify-content: flex-end;
                         height: 100%;
                         width: 50%;
+
+                        @media (orientation: portrait) {
+                            width: 40%;
+                        }
 
                         p {
                             margin-block: 0px;
@@ -165,6 +185,10 @@ const StyledExperience = styled.div`
 
                             @media (max-width: 1150px) and (orientation: landscape) {
                                 font-size: 14px;
+                            }
+
+                            @media (orientation: portrait) and (max-width: 950px) {
+                                font-size: 16px;
                             }
                         }
                     }
@@ -190,6 +214,10 @@ const StyledExperience = styled.div`
 
                         @media (max-width: 1150px) and (orientation: landscape) {
                             font-size: 13px;
+                        }
+
+                        @media (orientation: portrait) and (max-width: 950px) {
+                            font-size: 15px;
                         }
                     }
                 }

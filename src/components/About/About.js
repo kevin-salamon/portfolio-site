@@ -10,12 +10,21 @@ const StyledAbout = styled.div`
     justify-content: center;
     align-items: center;
 
+    @media (orientation: portrait) {
+        flex-direction: column-reverse;
+    }
+
     .about-container {
         height: 100%;
         width: 60%;
         display: flex;
         justify-content: center;
         align-items: center;
+
+        @media (orientation: portrait) {
+            height: 40%;
+            width: 100%;
+        }
 
         .about-box {
             height: 75%;
@@ -34,12 +43,20 @@ const StyledAbout = styled.div`
 
             }
 
+            @media (orientation: portrait) {
+                height: 100%;
+            }
+
             div {
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
                 width: 100%;
                 padding-left: 10%;
+
+                @media (orientation: portrait) {
+                    padding-left: 0%;
+                }
             }
 
             p, span {
@@ -60,6 +77,10 @@ const StyledAbout = styled.div`
                     @media (max-width: 1150px) and (orientation: landscape) {
                         font-size: 20px;
                     }
+
+                    @media (orientation: portrait) and (max-width: 950px) {
+                        font-size: 20px;
+                    }
                 }
 
                 span {
@@ -74,6 +95,10 @@ const StyledAbout = styled.div`
                     }
 
                     @media (max-width: 1150px) and (orientation: landscape) {
+                        font-size: 44px;
+                    }
+
+                    @media (orientation: portrait) and (max-width: 950px) {
                         font-size: 44px;
                     }
 
@@ -119,6 +144,10 @@ const StyledAbout = styled.div`
                     @media (max-width: 1150px) and (orientation: landscape) {
                         font-size: 16px;
                     }
+
+                    @media (orientation: portrait) and (max-width: 950px) {
+                        font-size: 16px;
+                    }
                 }
 
                 span {
@@ -133,6 +162,10 @@ const StyledAbout = styled.div`
                     }
 
                     @media (max-width: 1150px) and (orientation: landscape) {
+                        font-size: 24px;
+                    }
+
+                    @media (orientation: portrait) and (max-width: 950px) {
                         font-size: 24px;
                     }
 
@@ -196,6 +229,11 @@ const StyledAbout = styled.div`
         justify-content: center;
         align-items: center;
 
+        @media (orientation: portrait) {
+            height: 40%;
+            width: 100%;
+        }
+
         .portrait-box {
             height: 50%;
             width: 50%;
@@ -207,6 +245,11 @@ const StyledAbout = styled.div`
             @media (max-width: 1367px) and (orientation: landscape) {
                 width: 40%;
                 height: 40%;
+            }
+
+            @media (orientation: portrait) {
+                height: 90%;
+                width: 90%;
             }
 
             img {

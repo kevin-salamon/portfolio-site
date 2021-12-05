@@ -15,8 +15,8 @@ const StyledPortfolio = styled.div`
 `;
 
 const StyledPortfolioItem = styled.a`
-    height: 270px;
-    width: 480px;
+    height: 38%;
+    width: 27%;
     margin: 1%;
     background-color: #101017;
     box-shadow: 2px 2px 8px 1px #FFFFFF40;
@@ -30,6 +30,11 @@ const StyledPortfolioItem = styled.a`
     text-decoration: none;
 
     @media (max-width: 1150px) and (orientation: landscape) {
+        height: 27%;
+        width: 38%;
+    }
+
+    @media (orientation: portrait) {
         height: 27%;
         width: 38%;
     }

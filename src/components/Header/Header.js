@@ -41,6 +41,10 @@ const StyledHeader = styled.div`
         justify-content: flex-end;
         align-items: center;
 
+        @media (orientation: portrait) and (max-width: 950px) {
+            margin-right: 15px;
+        }
+
         .nav-box, .download-box {
             width: 120px;
             height: 100%;
@@ -50,6 +54,10 @@ const StyledHeader = styled.div`
             margin: 0px 10px 0px 10px;
             cursor: pointer;
             text-decoration: none;
+
+            @media (orientation: portrait) and (max-width: 950px) {
+                width: 100px;
+            }
 
             .hover-box {
                 display: flex;
@@ -88,6 +96,10 @@ const StyledHeader = styled.div`
                 color: #B2FFD6;
                 font-family: 'Space Mono', monospace;
                 user-select: none;
+
+                @media (orientation: portrait) and (max-width: 950px) {
+                    font-size: 11px;
+                }
             }
 
             .download {
@@ -115,6 +127,10 @@ const StyledHeader = styled.div`
                         margin-block: 0px;
                         color: ${props => props.hovered === 'download' ? `#202121` : `#B2FFD6`};
                         font-family: 'Space Mono', monospace;
+
+                        @media (orientation: portrait) and (max-width: 950px) {
+                            font-size: 11px;
+                        }
                     }
                 }
 

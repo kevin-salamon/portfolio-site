@@ -22,6 +22,7 @@ const StyledAppPage = styled.div`
 
   p {
     margin-block: 0px;
+    user-select: none;
   }
 
   ::-webkit-scrollbar {
