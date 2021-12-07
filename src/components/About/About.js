@@ -148,6 +148,14 @@ const StyledAbout = styled.div`
                     @media (orientation: portrait) and (max-width: 950px) {
                         font-size: 16px;
                     }
+
+                    @media (max-width: 815px) and (max-height: 550px) and (orientation: landscape) {
+                      
+                    }
+
+                    @media (max-width: 450px) and (orientation: portrait) {
+
+                    }
                 }
 
                 span {

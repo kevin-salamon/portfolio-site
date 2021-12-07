@@ -12,6 +12,17 @@ const StyledSidebar = styled.div`
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    transition: 0.3s ease all;
+
+    @media (max-width: 450px) and (orientation: portrait) {
+        height: 60px;
+        width: 100vw;
+        left: 0;
+        top: auto;
+        bottom: 0;
+        align-items: center;
+        background-color: ${props => props.scrollFromBottom <= 1000 ? `#19192400` : `#191924D9`};
+    }
 
     .content-box {
         width: 70%;
@@ -21,6 +32,13 @@ const StyledSidebar = styled.div`
         align-items: center;
         flex-direction: column;
 
+        @media (max-width: 450px) and (orientation: portrait) {
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            flex-direction: row;
+        }
+
         .favicon-container {
             width: 100%;
             height: 60%;
@@ -29,12 +47,21 @@ const StyledSidebar = styled.div`
             align-items: center;
             flex-direction: column;
 
+            @media (max-width: 450px) and (orientation: portrait) {
+                height: 100%;
+                flex-direction: row;
+            }
+
             .icon-box {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 width: 100%;
                 height: 60px;
+
+                @media (max-width: 450px) and (orientation: portrait) {
+                    height: 100%;
+                }
 
                 a {
                     padding: 0px;
@@ -70,6 +97,10 @@ const StyledSidebar = styled.div`
             justify-content: center;
             align-items: center;
 
+            @media (max-width: 450px) and (orientation: portrait) {
+                display: none;
+            }
+
             div {
                 height: 100%;
                 width: 2px;
@@ -79,10 +110,12 @@ const StyledSidebar = styled.div`
     }
 `;
 
-function Sidebar() {
+const Sidebar = ({
+    scrollFromBottom
+}) => {
 
     return (
-        <StyledSidebar>
+        <StyledSidebar scrollFromBottom={scrollFromBottom}>
             <div className='content-box'>
                 <div className='favicon-container'>
                     <div className='icon-box'>

@@ -15,6 +15,11 @@ const StyledHeader = styled.div`
     transition: 0.3s ease all;
     background-color: ${props => props.scrollDown >= 250 ? `#191924D9` : `#19192400`};
 
+    @media (max-width: 450px) and (orientation: portrait) {
+        height: 60px;
+        justify-content: center;
+    }
+
     .logo-box {
         width: 80px;
         height: 80px;
@@ -45,6 +50,11 @@ const StyledHeader = styled.div`
             margin-right: 15px;
         }
 
+        @media (max-width: 450px) and (orientation: portrait) {
+            margin-right: 0px;
+            justify-content: center;
+        }
+
         .nav-box, .download-box {
             width: 120px;
             height: 100%;
@@ -57,6 +67,11 @@ const StyledHeader = styled.div`
 
             @media (orientation: portrait) and (max-width: 950px) {
                 width: 100px;
+            }
+
+            @media (max-width: 450px) and (orientation: portrait) {
+                width: 60px;
+                margin: 0px 5px;
             }
 
             .hover-box {
@@ -100,6 +115,10 @@ const StyledHeader = styled.div`
                 @media (orientation: portrait) and (max-width: 950px) {
                     font-size: 11px;
                 }
+
+                @media (max-width: 450px) and (orientation: portrait) {
+                    font-size: 7px;
+                }
             }
 
             .download {
@@ -130,6 +149,10 @@ const StyledHeader = styled.div`
 
                         @media (orientation: portrait) and (max-width: 950px) {
                             font-size: 11px;
+                        }
+
+                        @media (max-width: 450px) and (orientation: portrait) {
+                            font-size: 7px;
                         }
                     }
                 }

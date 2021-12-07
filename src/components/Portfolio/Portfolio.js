@@ -92,6 +92,10 @@ const StyledPortfolioItem = styled.a`
         font-size: 36px;
         font-family: 'Space Mono', monospace;
         text-decoration: none;
+
+        @media (orientation: portrait) and (max-width: 950px) {
+            font-size: 25px;
+        }
     }
 `;
 

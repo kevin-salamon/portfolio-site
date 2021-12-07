@@ -50,6 +50,18 @@ const StyledSectionContainer = styled.div`
   width: 100%;
   position: absolute;
 
+  &.about-toplevel {
+    top: 0;
+  }
+
+  &.experience-toplevel {
+    top: 100vh;
+  }
+
+  &.portfolio-toplevel {
+    top: 200vh;
+  }
+
   .content-container {
     position: absolute;
     // background-color: white;
@@ -57,16 +69,17 @@ const StyledSectionContainer = styled.div`
     width: calc(100% - 100px);
     top: 80px;
     height: calc(100% - 80px);
+
+    @media (max-width: 450px) and (orientation: portrait) {
+
+    }
   }
 `;
 
 const App = () => {
-  // const scrollRef = useRef();
+
   const [scrollDown, setScrollDown] = useState(0);
-
-  // const checkAnimation = () => {
-
-  // }
+  const [scrollFromBottom, setScrollFromBottom] = useState(0);
 
   return (
     <Provider store={store}>
@@ -75,22 +88,24 @@ const App = () => {
         onScroll={() => {
           let container = document.getElementById('top-container');
           setScrollDown(container.scrollTop);
-          // checkAnimation();
+          let bottomDistance = container.scrollHeight - container.scrollTop;
+          setScrollFromBottom(bottomDistance);
+          console.log(bottomDistance);
         }}
       >
-        <Header scrollDown={scrollDown}/>
-        <Sidebar/>
-        <StyledSectionContainer style={{top: 0}} id="about">
+        <Header scrollDown={scrollDown} />
+        <Sidebar scrollFromBottom={scrollFromBottom} />
+        <StyledSectionContainer id="about" className='about-toplevel'>
           <div className='content-container'>
             <About />
           </div>
         </StyledSectionContainer>
-        <StyledSectionContainer style={{top: '100vh'}} id="experience">
+        <StyledSectionContainer id="experience" className='experience-toplevel'>
           <div className='content-container'>
             <Experience/>
           </div>
         </StyledSectionContainer>
-        <StyledSectionContainer style={{top: '200vh'}} id="portfolio">
+        <StyledSectionContainer id="portfolio" className='portfolio-toplevel'>
           <div className='content-container'>
             <Portfolio/>
           </div>
