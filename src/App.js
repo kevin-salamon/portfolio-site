@@ -71,7 +71,10 @@ const StyledSectionContainer = styled.div`
     height: calc(100% - 80px);
 
     @media (max-width: 450px) and (orientation: portrait) {
-
+      left: 0px;
+      width: 100%;
+      top: 60px;
+      height: calc(100% - 120px);
     }
   }
 `;

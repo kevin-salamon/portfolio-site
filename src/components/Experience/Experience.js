@@ -18,6 +18,10 @@ const StyledExperience = styled.div`
         flex-direction: column;
         position: relative;
 
+        @media (max-width: 450px) and (orientation: portrait) {
+            
+        }
+
         .intro {
             height: 10%;
             width: 100%;
@@ -85,6 +89,11 @@ const StyledExperience = styled.div`
                     width: 80%;
                 }
 
+                @media (max-width: 450px) and (orientation: portrait) {
+                    height: 100%;
+                    width: 100%;
+                }
+
                 .name-date {
                     display: flex;
                     align-items: center;
@@ -95,6 +104,10 @@ const StyledExperience = styled.div`
 
                     @media (max-width: 1150px) and (orientation: landscape) {
                         height: 45px;
+                    }
+
+                    @media (max-width: 450px) and (orientation: portrait) {
+                        height: 35px;
                     }
                     
                     .name {
@@ -120,6 +133,10 @@ const StyledExperience = styled.div`
                                 align-items: flex-start;
                             }
 
+                            @media (max-width: 450px) and (orientation: portrait) {
+                                align-items: flex-start;
+                            }
+
                             p {
                                 margin-block: 0px;
                                 font-size: 24px;
@@ -136,6 +153,10 @@ const StyledExperience = styled.div`
 
                                 @media (orientation: portrait) and (max-width: 950px) {
                                     font-size: 18px;
+                                }
+
+                                @media (max-width: 450px) and (orientation: portrait) {
+                                    font-size: 12px;
                                 }
                             }
 
@@ -157,6 +178,10 @@ const StyledExperience = styled.div`
                                 @media (orientation: portrait) and (max-width: 950px) {
                                     font-size: 16px;
                                 }
+
+                                @media (max-width: 450px) and (orientation: portrait) {
+                                    font-size: 9px;
+                                }
                             }
                         }
                     }
@@ -170,6 +195,10 @@ const StyledExperience = styled.div`
 
                         @media (orientation: portrait) {
                             width: 40%;
+                        }
+
+                        @media (max-width: 450px) and (orientation: portrait) {
+                            
                         }
 
                         p {
@@ -189,6 +218,11 @@ const StyledExperience = styled.div`
 
                             @media (orientation: portrait) and (max-width: 950px) {
                                 font-size: 16px;
+                            }
+
+                            @media (max-width: 450px) and (orientation: portrait) {
+                                font-size: 9px;
+                                text-align: center;
                             }
                         }
                     }
@@ -218,6 +252,10 @@ const StyledExperience = styled.div`
 
                         @media (orientation: portrait) and (max-width: 950px) {
                             font-size: 15px;
+                        }
+
+                        @media (max-width: 450px) and (orientation: portrait) {
+                            font-size: 11px;
                         }
                     }
                 }

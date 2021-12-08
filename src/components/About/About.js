@@ -26,6 +26,10 @@ const StyledAbout = styled.div`
             width: 100%;
         }
 
+        @media (max-width: 450px) and (orientation: portrait) {
+            height: 60%;
+        }
+
         .about-box {
             height: 75%;
             width: 90%;
@@ -81,6 +85,10 @@ const StyledAbout = styled.div`
                     @media (orientation: portrait) and (max-width: 950px) {
                         font-size: 20px;
                     }
+
+                    @media (max-width: 450px) and (orientation: portrait) {
+                        font-size: 16px;
+                    }
                 }
 
                 span {
@@ -100,6 +108,10 @@ const StyledAbout = styled.div`
 
                     @media (orientation: portrait) and (max-width: 950px) {
                         font-size: 44px;
+                    }
+
+                    @media (max-width: 450px) and (orientation: portrait) {
+                        font-size: 38px;
                     }
 
                     section {
@@ -154,7 +166,7 @@ const StyledAbout = styled.div`
                     }
 
                     @media (max-width: 450px) and (orientation: portrait) {
-
+                        font-size: 10px;
                     }
                 }
 
@@ -175,6 +187,10 @@ const StyledAbout = styled.div`
 
                     @media (orientation: portrait) and (max-width: 950px) {
                         font-size: 24px;
+                    }
+
+                    @media (max-width: 450px) and (orientation: portrait) {
+                        font-size: 20px;
                     }
 
                     section {
@@ -221,6 +237,10 @@ const StyledAbout = styled.div`
                     @media (max-width: 1150px) and (orientation: landscape) {
                         font-size: 13px;
                     }
+
+                    @media (max-width: 450px) and (orientation: portrait) {
+                        font-size: 13px;
+                    }
                 }
 
                 &.after {
@@ -240,6 +260,10 @@ const StyledAbout = styled.div`
         @media (orientation: portrait) {
             height: 40%;
             width: 100%;
+        }
+
+        @media (max-width: 450px) and (orientation: portrait) {
+            height: 35%;
         }
 
         .portrait-box {

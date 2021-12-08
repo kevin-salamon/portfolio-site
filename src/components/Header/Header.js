@@ -53,6 +53,8 @@ const StyledHeader = styled.div`
         @media (max-width: 450px) and (orientation: portrait) {
             margin-right: 0px;
             justify-content: center;
+            width: 100%;
+            justify-content: space-evenly;
         }
 
         .nav-box, .download-box {
