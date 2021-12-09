@@ -111,7 +111,11 @@ const StyledAbout = styled.div`
                     }
 
                     @media (max-width: 450px) and (orientation: portrait) {
-                        font-size: 38px;
+                        font-size: 32px;
+                    }
+
+                    @media (max-width: 380px) and (orientation: portrait) {
+
                     }
 
                     section {
@@ -190,7 +194,11 @@ const StyledAbout = styled.div`
                     }
 
                     @media (max-width: 450px) and (orientation: portrait) {
-                        font-size: 20px;
+                        font-size: 18px;
+                    }
+
+                    @media (max-width: 380px) and (orientation: portrait) {
+                        font-size: 15px;
                     }
 
                     section {
@@ -239,7 +247,7 @@ const StyledAbout = styled.div`
                     }
 
                     @media (max-width: 450px) and (orientation: portrait) {
-                        font-size: 13px;
+                        font-size: 11px;
                     }
                 }
 
@@ -263,7 +271,7 @@ const StyledAbout = styled.div`
         }
 
         @media (max-width: 450px) and (orientation: portrait) {
-            height: 35%;
+            height: 30%;
         }
 
         .portrait-box {

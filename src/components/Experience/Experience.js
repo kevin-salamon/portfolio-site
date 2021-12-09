@@ -257,6 +257,10 @@ const StyledExperience = styled.div`
                         @media (max-width: 450px) and (orientation: portrait) {
                             font-size: 11px;
                         }
+
+                        @media (max-width: 380px) and (orientation: portrait) {
+                            font-size: 10px;
+                        }
                     }
                 }
             }
