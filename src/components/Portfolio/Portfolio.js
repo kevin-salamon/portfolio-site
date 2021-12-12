@@ -100,6 +100,10 @@ const StyledPortfolioItem = styled.a`
         @media (max-width: 450px) and (orientation: portrait) {
             text-align: center;
         }
+
+        @media (max-width: 815px) and (max-height: 550px) and (orientation: landscape) {
+            font-size: 20px;     
+        }
     }
 `;
 

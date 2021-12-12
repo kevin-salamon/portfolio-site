@@ -76,6 +76,13 @@ const StyledSectionContainer = styled.div`
       top: 60px;
       height: calc(100% - 120px);
     }
+
+    @media (max-width: 815px) and (max-height: 550px) and (orientation: landscape) {
+      left: 60px;
+      top: 60px;
+      width: calc(100% - 60px);
+      height: calc(100% - 60px);        
+    }
   }
 `;
 
@@ -93,7 +100,7 @@ const App = () => {
           setScrollDown(container.scrollTop);
           let bottomDistance = container.scrollHeight - container.scrollTop;
           setScrollFromBottom(bottomDistance);
-          console.log(bottomDistance);
+          // console.log(bottomDistance);
         }}
       >
         <Header scrollDown={scrollDown} />

@@ -20,6 +20,11 @@ const StyledHeader = styled.div`
         justify-content: center;
     }
 
+    @media (max-width: 815px) and (max-height: 550px) and (orientation: landscape) {
+        height: 60px;
+        justify-content: flex-end;     
+    }
+
     .logo-box {
         width: 80px;
         height: 80px;
@@ -57,6 +62,10 @@ const StyledHeader = styled.div`
             justify-content: space-evenly;
         }
 
+        @media (max-width: 815px) and (max-height: 550px) and (orientation: landscape) {
+            margin-right: 0px;
+        }
+
         .nav-box, .download-box {
             width: 120px;
             height: 100%;
@@ -74,6 +83,10 @@ const StyledHeader = styled.div`
             @media (max-width: 450px) and (orientation: portrait) {
                 width: 60px;
                 margin: 0px 5px;
+            }
+
+            @media (max-width: 710px) and (max-height: 410px) and (orientation: landscape) {
+                width: 100px;
             }
 
             .hover-box {
@@ -120,6 +133,10 @@ const StyledHeader = styled.div`
 
                 @media (max-width: 450px) and (orientation: portrait) {
                     font-size: 7px;
+                }
+
+                @media (max-width: 710px) and (max-height: 410px) and (orientation: landscape) {
+                    font-size: 11px;
                 }
             }
 

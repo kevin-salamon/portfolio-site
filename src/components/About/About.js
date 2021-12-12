@@ -30,6 +30,10 @@ const StyledAbout = styled.div`
             height: 60%;
         }
 
+        @media (max-width: 815px) and (max-height: 550px) and (orientation: landscape) {
+            padding-bottom: 5%;       
+        }
+
         .about-box {
             height: 75%;
             width: 90%;
@@ -49,6 +53,10 @@ const StyledAbout = styled.div`
 
             @media (orientation: portrait) {
                 height: 100%;
+            }
+
+            @media (max-width: 450px) and (orientation: portrait) {
+                padding-bottom: 8%;
             }
 
             div {
@@ -89,6 +97,10 @@ const StyledAbout = styled.div`
                     @media (max-width: 450px) and (orientation: portrait) {
                         font-size: 16px;
                     }
+
+                    @media (max-width: 815px) and (max-height: 550px) and (orientation: landscape) {
+                        font-size: 16px;
+                    }
                 }
 
                 span {
@@ -116,6 +128,14 @@ const StyledAbout = styled.div`
 
                     @media (max-width: 380px) and (orientation: portrait) {
 
+                    }
+
+                    @media (max-width: 815px) and (max-height: 550px) and (orientation: landscape) {
+                        font-size: 32px;
+                    }
+
+                    @media (max-width: 710px) and (max-height: 410px) and (orientation: landscape) {
+                        font-size: 28px;
                     }
 
                     section {
@@ -165,11 +185,11 @@ const StyledAbout = styled.div`
                         font-size: 16px;
                     }
 
-                    @media (max-width: 815px) and (max-height: 550px) and (orientation: landscape) {
-                      
+                    @media (max-width: 450px) and (orientation: portrait) {
+                        font-size: 10px;
                     }
 
-                    @media (max-width: 450px) and (orientation: portrait) {
+                    @media (max-width: 815px) and (max-height: 550px) and (orientation: landscape) {
                         font-size: 10px;
                     }
                 }
@@ -198,6 +218,10 @@ const StyledAbout = styled.div`
                     }
 
                     @media (max-width: 380px) and (orientation: portrait) {
+                        font-size: 15px;
+                    }
+
+                    @media (max-width: 815px) and (max-height: 550px) and (orientation: landscape) {
                         font-size: 15px;
                     }
 
@@ -249,6 +273,14 @@ const StyledAbout = styled.div`
                     @media (max-width: 450px) and (orientation: portrait) {
                         font-size: 11px;
                     }
+
+                    @media (max-width: 815px) and (max-height: 550px) and (orientation: landscape) {
+                        font-size: 11px;
+                    }
+
+                    @media (max-width: 710px) and (max-height: 410px) and (orientation: landscape) {
+                        font-size: 9px;
+                    }
                 }
 
                 &.after {
@@ -274,6 +306,10 @@ const StyledAbout = styled.div`
             height: 30%;
         }
 
+        @media (max-width: 815px) and (max-height: 550px) and (orientation: landscape) {
+            padding-bottom: 5%;   
+        }
+
         .portrait-box {
             height: 50%;
             width: 50%;
@@ -290,6 +326,11 @@ const StyledAbout = styled.div`
             @media (orientation: portrait) {
                 height: 90%;
                 width: 90%;
+            }
+
+            @media (max-width: 815px) and (max-height: 550px) and (orientation: landscape) {
+                width: 50%;
+                height: 50%;
             }
 
             img {

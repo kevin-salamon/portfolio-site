@@ -3,11 +3,11 @@ import styled from 'styled-components';
 import { GitHub, Instagram, Linkedin } from 'react-feather';
 
 const StyledSidebar = styled.div`
-    height: calc(100vh - 80px);
+    height: calc(100vh - 60px);
     width: 100px;
     position: fixed;
     left: 0;
-    top: 80px;
+    top: 60px;
     z-index: 1;
     display: flex;
     justify-content: center;
@@ -24,6 +24,10 @@ const StyledSidebar = styled.div`
         background-color: ${props => props.scrollFromBottom <= 1000 ? `#19192400` : `#191924D9`};
     }
 
+    @media (max-width: 815px) and (max-height: 550px) and (orientation: landscape) {
+        width: 60px;
+    }
+
     .content-box {
         width: 70%;
         height: 45%;
@@ -37,6 +41,10 @@ const StyledSidebar = styled.div`
             height: 100%;
             justify-content: center;
             flex-direction: row;
+        }
+
+        @media (max-width: 815px) and (max-height: 550px) and (orientation: landscape) {
+            height: 100%;
         }
 
         .favicon-container {

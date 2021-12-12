@@ -22,6 +22,10 @@ const StyledExperience = styled.div`
             
         }
 
+        @media (max-width: 710px) and (max-height: 410px) and (orientation: landscape) {
+            height: 100%;
+        }
+
         .intro {
             height: 10%;
             width: 100%;
@@ -94,6 +98,11 @@ const StyledExperience = styled.div`
                     width: 100%;
                 }
 
+                @media (max-width: 815px) and (max-height: 550px) and (orientation: landscape) {
+                    width: 100%;
+                    height: 100%;
+                }
+
                 .name-date {
                     display: flex;
                     align-items: center;
@@ -108,6 +117,14 @@ const StyledExperience = styled.div`
 
                     @media (max-width: 450px) and (orientation: portrait) {
                         height: 35px;
+                    }
+
+                    @media (max-width: 815px) and (max-height: 550px) and (orientation: landscape) {
+                        height: 35px;
+                    }
+
+                    @media (max-width: 710px) and (max-height: 410px) and (orientation: landscape) {
+                        height: 30px;
                     }
                     
                     .name {
@@ -158,6 +175,14 @@ const StyledExperience = styled.div`
                                 @media (max-width: 450px) and (orientation: portrait) {
                                     font-size: 12px;
                                 }
+
+                                @media (max-width: 815px) and (max-height: 550px) and (orientation: landscape) {
+                                    font-size: 15px;
+                                }
+
+                                @media (max-width: 710px) and (max-height: 410px) and (orientation: landscape) {
+                                    font-size: 13px;
+                                }
                             }
 
                             span {
@@ -181,6 +206,14 @@ const StyledExperience = styled.div`
 
                                 @media (max-width: 450px) and (orientation: portrait) {
                                     font-size: 9px;
+                                }
+
+                                @media (max-width: 815px) and (max-height: 550px) and (orientation: landscape) {
+                                    font-size: 11px;
+                                }
+
+                                @media (max-width: 710px) and (max-height: 410px) and (orientation: landscape) {
+                                    font-size: 10px;
                                 }
                             }
                         }
@@ -224,6 +257,14 @@ const StyledExperience = styled.div`
                                 font-size: 9px;
                                 text-align: center;
                             }
+
+                            @media (max-width: 815px) and (max-height: 550px) and (orientation: landscape) {
+                                font-size: 11px;
+                            }
+
+                            @media (max-width: 710px) and (max-height: 410px) and (orientation: landscape) {
+                                font-size: 10px;
+                            }
                         }
                     }
                 }
@@ -255,11 +296,19 @@ const StyledExperience = styled.div`
                         }
 
                         @media (max-width: 450px) and (orientation: portrait) {
-                            font-size: 11px;
+                            font-size: 10.5px;
                         }
 
                         @media (max-width: 380px) and (orientation: portrait) {
                             font-size: 10px;
+                        }
+
+                        @media (max-width: 815px) and (max-height: 550px) and (orientation: landscape) {
+                            font-size: 9px;
+                        }
+
+                        @media (max-width: 710px) and (max-height: 410px) and (orientation: landscape) {
+                            font-size: 8px;
                         }
                     }
                 }
@@ -295,7 +344,7 @@ function Experience() {
                 document.getElementById('job-two').classList.add('start-animation');
                 document.getElementById('job-three').classList.add('start-animation');
             }
-        })
+        });
     }, []);
 
     return (
