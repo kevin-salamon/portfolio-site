@@ -5,7 +5,7 @@ import {
 } from '../../actions';
 
 const mapStateToProps = (state) => ({
-
+    showSidebar: state.viewReducer.showSidebar
 });
   
 const mapDispatchToProps = (dispatch) => {

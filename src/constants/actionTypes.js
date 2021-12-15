@@ -1,1 +1,2 @@
 export const SET_SCROLL = "SET_SCROLL";
+export const SET_SHOW_SIDEBAR = "SET_SHOW_SIDEBAR";

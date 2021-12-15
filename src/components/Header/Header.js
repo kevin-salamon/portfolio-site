@@ -123,7 +123,7 @@ const StyledHeader = styled.div`
             p {
                 font-size: 13px;
                 margin-block: 0px;
-                color: #B2FFD6;
+                color: white;
                 font-family: 'Space Mono', monospace;
                 user-select: none;
 
@@ -217,22 +217,22 @@ const Header = ({
             <div className='navigation-container'>
                 <a className='nav-box' href="#about" onPointerEnter={() => setHovered('about')} onPointerLeave={() => setHovered('')}>
                     <div className='hover-box about'>
-                        <p><span>1. </span>About Me</p>
+                        <p><span></span>About Me</p>
                     </div>
                 </a>
                 <a className='nav-box' href="#experience" onPointerEnter={() => setHovered('experience')} onPointerLeave={() => setHovered('')}>
                     <div className='hover-box experience'>
-                        <p><span>2. </span>Experience</p>
+                        <p><span></span>Experience</p>
                     </div>
                 </a>
                 <a className='nav-box' href="#portfolio" onPointerEnter={() => setHovered('portfolio')} onPointerLeave={() => setHovered('')}>
                     <div className='hover-box portfolio'>
-                        <p><span>3. </span>Portfolio</p>
+                        <p><span></span>Portfolio</p>
                     </div>
                 </a>
                 <a className='nav-box' href="#contact" onPointerEnter={() => setHovered('contact')} onPointerLeave={() => setHovered('')}>
                     <div className='hover-box contact'>
-                        <p><span>4. </span>Contact Me</p>
+                        <p><span></span>Contact Me</p>
                     </div>
                 </a>
                 <a href="https://docs.google.com/document/d/1-ZYgfoqER74Fhof5RPg1xxSGk43QATLV/edit?usp=sharing&ouid=114648167818125791159&rtpof=true&sd=true" target="#" className='download-box'>

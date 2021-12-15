@@ -1,5 +1,6 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
+import { GitHub, Instagram, Linkedin } from 'react-feather';
 
 const StyledContact = styled.div`
     height: 100%;
@@ -18,11 +19,12 @@ const StyledContact = styled.div`
         flex-direction: column;
 
         .top {
-            height: 30%;
+            height: min-content;
             width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
+            margin: 1%;
 
             p {
                 font-size: 44px;
@@ -34,11 +36,12 @@ const StyledContact = styled.div`
         }
 
         .description {
-            height: 70%;
+            height: min-content;
             width: 100%;
             display: flex;
             justify-content: center;
-            align-items: flex-start;
+            align-items: center;
+            margin: 1%;
 
             p {
                 font-size: 24px;
@@ -73,10 +76,106 @@ const StyledContact = styled.div`
                 }
             }
         }
+
+        .icon-container {
+            height: 20%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: visible;
+
+            .slidein-icons {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                opacity: 0;
+
+                &.start-animation {
+                    animation: 1s ease;
+                    animation-name: slideup;
+                    animation-iteration-count: 1;
+                }
+
+                @keyframes slideup {
+                    from {
+                        opacity: 0;
+                        top: 50%;
+                    }
+        
+                    to {
+                        opacity: 1;
+                        top: 0;
+                    }
+                }
+
+                .icon-box {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 80px;
+                    height: 80px;
+                    margin: 5%;
+    
+                    a {
+                        padding: 0px;
+                        margin: 0px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 50px;
+                        width: 50px;
+                        transition: 0.2s ease all;
+    
+                        &:hover {
+                            transform: scale(1.2, 1.2); 
+                        }
+    
+                        svg {
+                            height: 100%;
+                            width: 100%;
+                            stroke: #B2FFD6;
+                            stroke-width: 2;
+                            stroke-linecap: round;
+                            stroke-linejoin: round;
+                            fill: none;
+                        }
+                    }
+            }
+        }
     }
 `;
 
-function Contact() {
+const Contact = ({
+    setShowSidebar,
+    showSidebar
+}) => {
+
+    const iconRef = useRef();
+
+    useEffect(() => {
+        let topLevelContainer = document.getElementById('top-container');
+        topLevelContainer.addEventListener('scroll', () => {
+            let iconBox = document.getElementById('slidein-icons').getBoundingClientRect().top;
+            console.log("ICON FROM TOP", iconBox);
+            if (iconBox <= 750) {
+                document.getElementById('slidein-icons').classList.add('start-animation');
+                if (showSidebar === true) {
+                    setShowSidebar(false);
+                }
+            } else {
+                console.log("SHOW SIDEBAR", showSidebar)
+                if (showSidebar === false) {
+                    console.log("SIDEBAR ON")
+                    setShowSidebar(true);
+                }
+            }
+        });
+    }, []);
 
     return (
         <StyledContact>
@@ -87,8 +186,27 @@ function Contact() {
                 <div className='description'>
                     <p>
                         I'm always looking to hear new ideas, make connections, or talk about collaborating on a cool project!
-                        If you'd like to talk more, shoot me an email at <span>theksalamon@gmail.com,</span> or send me a message on <a href="https://www.linkedin.com/in/kevin-salamon/">Linkedin</a>.
+                        If you'd like to talk more, shoot me an email at <span>theksalamon@gmail.com,</span> or send me a message on <a href="https://www.linkedin.com/in/kevin-salamon/" target="#">Linkedin</a>.
                     </p>
+                </div>
+                <div className='icon-container'>
+                    <div className='slidein-icons' id='slidein-icons' ref={iconRef} onAnimationEnd={() => iconRef.current.style.opacity = 1}>
+                        <div className='icon-box'>
+                            <a href="https://github.com/kevin-salamon" target="#">
+                                <GitHub />
+                            </a>
+                        </div>
+                        <div className='icon-box'>
+                            <a href="https://www.linkedin.com/in/kevin-salamon/" target="#">
+                                <Linkedin />
+                            </a>
+                        </div>
+                        <div className='icon-box'>
+                            <a href="https://www.instagram.com/kevinisrfk/" target="#">
+                                <Instagram />
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </StyledContact>

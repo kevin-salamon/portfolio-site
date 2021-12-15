@@ -35,6 +35,7 @@ const StyledSidebar = styled.div`
         justify-content: flex-start;
         align-items: center;
         flex-direction: column;
+        position: absolute;
 
         @media (max-width: 450px) and (orientation: portrait) {
             width: 100%;
@@ -119,12 +120,13 @@ const StyledSidebar = styled.div`
 `;
 
 const Sidebar = ({
-    scrollFromBottom
+    scrollFromBottom,
+    showSidebar
 }) => {
 
     return (
         <StyledSidebar scrollFromBottom={scrollFromBottom}>
-            <div className='content-box'>
+            <div className='content-box' id='content-box'>
                 <div className='favicon-container'>
                     <div className='icon-box'>
                         <a href="https://github.com/kevin-salamon" target="#">
