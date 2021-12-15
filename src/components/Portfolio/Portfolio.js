@@ -90,7 +90,7 @@ const StyledPortfolioItem = styled.a`
         margin-block: 0px;
         color: #FFFFFF;
         font-size: 36px;
-        font-family: 'Space Mono', monospace;
+        font-family: 'Merriweather Sans', sans-serif;
         text-decoration: none;
 
         @media (orientation: portrait) and (max-width: 950px) {

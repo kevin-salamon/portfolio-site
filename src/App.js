@@ -5,6 +5,7 @@ import Experience from './components/Experience';
 import Portfolio from './components/Portfolio'
 import Sidebar from './components/Sidebar';
 import Header from './components/Header';
+import Contact from './components/Contact';
 import store from './store';
 import { Provider } from 'react-redux';
 
@@ -60,6 +61,10 @@ const StyledSectionContainer = styled.div`
 
   &.portfolio-toplevel {
     top: 200vh;
+  }
+
+  &.contact-toplevel {
+    top: 300vh;
   }
 
   .content-container {
@@ -118,6 +123,11 @@ const App = () => {
         <StyledSectionContainer id="portfolio" className='portfolio-toplevel'>
           <div className='content-container'>
             <Portfolio/>
+          </div>
+        </StyledSectionContainer>
+        <StyledSectionContainer id="contact" className='contact-toplevel'>
+          <div className='content-container'>
+            <Contact/>
           </div>
         </StyledSectionContainer>
       </StyledAppPage>

@@ -230,7 +230,7 @@ const Header = ({
                         <p><span>3. </span>Portfolio</p>
                     </div>
                 </a>
-                <a className='nav-box' onPointerEnter={() => setHovered('contact')} onPointerLeave={() => setHovered('')}>
+                <a className='nav-box' href="#contact" onPointerEnter={() => setHovered('contact')} onPointerLeave={() => setHovered('')}>
                     <div className='hover-box contact'>
                         <p><span>4. </span>Contact Me</p>
                     </div>
