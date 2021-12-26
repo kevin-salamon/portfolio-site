@@ -22,6 +22,7 @@ const StyledSidebar = styled.div`
         bottom: 0;
         align-items: center;
         background-color: ${props => props.scrollFromBottom <= 1000 ? `#19192400` : `#191924D9`};
+        transform: ${props => props.scrollFromBottom <= 1000 ? 'translateY(100%)' : 'translateY(0%)'}
     }
 
     @media (max-width: 815px) and (max-height: 550px) and (orientation: landscape) {
@@ -125,7 +126,7 @@ const Sidebar = ({
 }) => {
 
     return (
-        <StyledSidebar scrollFromBottom={scrollFromBottom}>
+        <StyledSidebar scrollFromBottom={scrollFromBottom} showSidebar={showSidebar}>
             <div className='content-box' id='content-box'>
                 <div className='favicon-container'>
                     <div className='icon-box'>
