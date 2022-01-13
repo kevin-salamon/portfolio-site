@@ -18,6 +18,18 @@ const StyledContact = styled.div`
         align-items: center;
         flex-direction: column;
 
+        @media (orientation: portrait) and (max-width: 950px) {
+            width: 80%;
+        }
+
+        @media (max-width: 815px) and (max-height: 550px) and (orientation: landscape) {
+            margin-bottom: 5%;
+        }
+
+        @media (max-width: 450px) and (orientation: portrait) {
+
+        }
+
         .top {
             height: min-content;
             width: 100%;
@@ -32,6 +44,18 @@ const StyledContact = styled.div`
                 color: white;
                 position: relative;
                 letter-spacing: 0.5px;
+
+                @media (orientation: portrait) and (max-width: 950px) {
+                    font-size: 30px;
+                }
+
+                @media (max-width: 815px) and (max-height: 550px) and (orientation: landscape) {
+                    font-size: 16px;
+                }
+
+                @media (max-width: 450px) and (orientation: portrait) {
+                    font-size: 20px;
+                }
             }
         }
 
@@ -49,6 +73,18 @@ const StyledContact = styled.div`
                 font-family: 'Space Mono', monospace;
                 position: relative;
                 text-align: center;
+
+                @media (orientation: portrait) and (max-width: 950px) {
+                    font-size: 19px;
+                }
+
+                @media (max-width: 815px) and (max-height: 550px) and (orientation: landscape) {
+                    font-size: 13px;
+                }
+
+                @media (max-width: 450px) and (orientation: portrait) {
+                    font-size: 14px;
+                }
             }
 
             span {
@@ -58,6 +94,18 @@ const StyledContact = styled.div`
                 position: relative;
                 text-align: center;
                 text-decoration: underline;
+
+                @media (orientation: portrait) and (max-width: 950px) {
+                    font-size: 21px;
+                }
+
+                @media (max-width: 815px) and (max-height: 550px) and (orientation: landscape) {
+                    font-size: 14px;
+                }
+
+                @media (max-width: 450px) and (orientation: portrait) {
+                    font-size: 15px;
+                }
             }
 
             a {
@@ -73,6 +121,18 @@ const StyledContact = styled.div`
 
                 &:hover {
                     color: #ebfff0;
+                }
+
+                @media (orientation: portrait) and (max-width: 950px) {
+                    font-size: 21px;
+                }
+
+                @media (max-width: 815px) and (max-height: 550px) and (orientation: landscape) {
+                    font-size: 14px;
+                }
+
+                @media (max-width: 450px) and (orientation: portrait) {
+                    font-size: 15px;
                 }
             }
         }
@@ -120,6 +180,14 @@ const StyledContact = styled.div`
                     width: 80px;
                     height: 80px;
                     margin: 5%;
+
+                    @media (max-width: 815px) and (max-height: 550px) and (orientation: landscape) {
+                        margin: 10%;
+                    }
+
+                    @media (max-width: 450px) and (orientation: portrait) {
+                        margin: 10%;
+                    }
     
                     a {
                         padding: 0px;
@@ -130,6 +198,16 @@ const StyledContact = styled.div`
                         height: 50px;
                         width: 50px;
                         transition: 0.2s ease all;
+
+                        @media (max-width: 815px) and (max-height: 550px) and (orientation: landscape) {
+                            height: 25px;
+                            width: 25px;
+                        }
+
+                        @media (max-width: 450px) and (orientation: portrait) {
+                            height: 25px;
+                            width: 25px;
+                        }
     
                         &:hover {
                             transform: scale(1.2, 1.2); 
@@ -138,7 +216,7 @@ const StyledContact = styled.div`
                         svg {
                             height: 100%;
                             width: 100%;
-                            stroke: #B2FFD6;
+                            stroke: white;
                             stroke-width: 2;
                             stroke-linecap: round;
                             stroke-linejoin: round;
@@ -161,18 +239,9 @@ const Contact = ({
         let topLevelContainer = document.getElementById('top-container');
         topLevelContainer.addEventListener('scroll', () => {
             let iconBox = document.getElementById('slidein-icons').getBoundingClientRect().top;
-            console.log("ICON FROM TOP", iconBox);
+            // console.log("ICON FROM TOP", iconBox);
             if (iconBox <= 750) {
                 document.getElementById('slidein-icons').classList.add('start-animation');
-                if (showSidebar === true) {
-                    setShowSidebar(false);
-                }
-            } else {
-                console.log("SHOW SIDEBAR", showSidebar)
-                if (showSidebar === false) {
-                    console.log("SIDEBAR ON")
-                    setShowSidebar(true);
-                }
             }
         });
     }, []);

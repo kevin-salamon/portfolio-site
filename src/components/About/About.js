@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import styled from 'styled-components';
 import profile from '../../assets/images/profile.jpg';
 
@@ -317,6 +317,7 @@ const StyledAbout = styled.div`
             justify-content: center;
             align-items: center;
             object-fit: contain;
+            user-select: none;
 
             @media (max-width: 1367px) and (orientation: landscape) {
                 width: 40%;

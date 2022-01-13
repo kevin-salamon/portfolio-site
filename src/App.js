@@ -6,6 +6,7 @@ import Portfolio from './components/Portfolio'
 import Sidebar from './components/Sidebar';
 import Header from './components/Header';
 import Contact from './components/Contact';
+import LogoSlot from './components/LogoSlot';
 import store from './store';
 import { Provider } from 'react-redux';
 
@@ -110,6 +111,7 @@ const App = () => {
       >
         <Header scrollDown={scrollDown} />
         <Sidebar scrollFromBottom={scrollFromBottom} />
+        <LogoSlot />
         <StyledSectionContainer id="about" className='about-toplevel'>
           <div className='content-container'>
             <About />
