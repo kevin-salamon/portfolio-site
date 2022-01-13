@@ -368,7 +368,7 @@ function About() {
                     <div className='description'>
                         <p>
                             I use the React.js web stack, Java + Spring Boot, and cloud computing services like AWS and Firestore to construct polished and comprehensive enterprise software.
-                            I currently work as a developer for a lean and lovable SAAS company out in central NJ.
+                            I'm based in Brooklyn NY, and I currently work as a developer for a lean and lovable SAAS company out in central NJ.
                         </p>
                     </div>
                     <div className='description after'>
