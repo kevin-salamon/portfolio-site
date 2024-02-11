@@ -209,6 +209,20 @@ const Header = ({
 
     const [hovered, setHovered] = useState('');
 
+    const handleFileDownload = () => {
+        const url = process.env.PUBLIC_URL + '/Resume.pdf';
+        const link = document.createElement('a');
+        link.href = url;
+        link.setAttribute(
+            'download',
+            `KevinSalamon_Resume.pdf`,
+        );
+        document.body.appendChild(link);
+        link.click();
+        link.parentNode.removeChild(link);
+
+    }
+
     return (
         <StyledHeader hovered={hovered} scrollDown={scrollDown}>
             <div className='logo-box'>
@@ -235,7 +249,7 @@ const Header = ({
                         <p><span></span>Contact Me</p>
                     </div>
                 </a>
-                <a href="https://docs.google.com/document/d/1-ZYgfoqER74Fhof5RPg1xxSGk43QATLV/edit?usp=sharing&ouid=114648167818125791159&rtpof=true&sd=true" target="#" className='download-box'>
+                <div onClick={() => handleFileDownload()} className='download-box'>
                     <div className='download' onPointerEnter={() => setHovered('download')} onPointerLeave={() => setHovered('')}>
                         <div className='text'>
                             <p>Resume</p>
@@ -244,7 +258,7 @@ const Header = ({
                             <Download />
                         </div>
                     </div>
-                </a>
+                </div>
             </div>
         </StyledHeader>
     );

@@ -271,7 +271,7 @@ const Contact = ({
                             </a>
                         </div>
                         <div className='icon-box'>
-                            <a href="https://www.instagram.com/kevinisrfk/" target="#">
+                            <a href="https://www.instagram.com/thekevinsalamon/" target="#">
                                 <Instagram />
                             </a>
                         </div>
