@@ -39,7 +39,7 @@ const StyledContact = styled.div`
             margin: 1%;
 
             p {
-                font-size: 44px;
+                font-size: 36px;
                 font-family: 'Merriweather Sans', sans-serif;
                 color: white;
                 position: relative;
@@ -68,7 +68,7 @@ const StyledContact = styled.div`
             margin: 1%;
 
             p {
-                font-size: 24px;
+                font-size: 20px;
                 color: #B2FFD6;
                 font-family: 'Space Mono', monospace;
                 position: relative;
@@ -88,7 +88,7 @@ const StyledContact = styled.div`
             }
 
             span {
-                font-size: 26px;
+                font-size: 21px;
                 color: white;
                 font-family: 'Space Mono', monospace;
                 position: relative;
@@ -110,7 +110,7 @@ const StyledContact = styled.div`
 
             a {
                 text-decoration: none;
-                font-size: 26px;
+                font-size: 21px;
                 color: white;
                 font-family: 'Space Mono', monospace;
                 position: relative;
@@ -139,6 +139,7 @@ const StyledContact = styled.div`
 
         .icon-container {
             height: 20%;
+            margin-top: 2%;
             width: 100%;
             display: flex;
             justify-content: center;

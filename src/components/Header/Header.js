@@ -13,7 +13,8 @@ const StyledHeader = styled.div`
     justify-content: flex-end;
     align-items: center;
     transition: 0.3s ease all;
-    background-color: ${props => props.scrollDown >= 250 ? `#191924D9` : `#19192400`};
+    // background-color: ${props => props.scrollDown >= 250 ? `#191924D9` : `#19192400`};
+    background-color: #191924D9;
 
     @media (max-width: 450px) and (orientation: portrait) {
         height: 60px;
@@ -239,11 +240,11 @@ const Header = ({
                         <p><span></span>Experience</p>
                     </div>
                 </a>
-                <a className='nav-box' href="#portfolio" onPointerEnter={() => setHovered('portfolio')} onPointerLeave={() => setHovered('')}>
+                {/* <a className='nav-box' href="#portfolio" onPointerEnter={() => setHovered('portfolio')} onPointerLeave={() => setHovered('')}>
                     <div className='hover-box portfolio'>
                         <p><span></span>Portfolio</p>
                     </div>
-                </a>
+                </a> */}
                 <a className='nav-box' href="#contact" onPointerEnter={() => setHovered('contact')} onPointerLeave={() => setHovered('')}>
                     <div className='hover-box contact'>
                         <p><span></span>Contact Me</p>

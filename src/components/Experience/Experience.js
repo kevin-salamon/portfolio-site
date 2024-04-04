@@ -108,7 +108,8 @@ const StyledExperience = styled.div`
                     align-items: center;
                     justify-content: center;
                     flex-direction: row;
-                    height: 60px;
+                    // height: 60px;
+                    margin-bottom: 4px;
                     width: 100%;
 
                     @media (max-width: 1150px) and (orientation: landscape) {
@@ -156,12 +157,12 @@ const StyledExperience = styled.div`
 
                             p {
                                 margin-block: 0px;
-                                font-size: 24px;
+                                font-size: 20px;
                                 color: white;
                                 font-family: 'Merriweather Sans', sans-serif;
 
                                 @media (max-width: 1367px) and (orientation: landscape) {
-                                    font-size: 22px;
+                                    font-size: 20px;
                                 }
 
                                 @media (max-width: 1150px) and (orientation: landscape) {
@@ -187,13 +188,13 @@ const StyledExperience = styled.div`
 
                             span {
                                 margin-block: 0px;
-                                font-size: 18px;
+                                font-size: 16px;
                                 color: #B2FFD6;
                                 font-family: 'Space Mono', monospace;
                                 font-style: italic;
 
                                 @media (max-width: 1367px) and (orientation: landscape) {
-                                    font-size: 18px;
+                                    font-size: 16px;
                                 }
 
                                 @media (max-width: 1150px) and (orientation: landscape) {
@@ -236,13 +237,13 @@ const StyledExperience = styled.div`
 
                         p {
                             margin-block: 0px;
-                            font-size: 18px;
+                            font-size: 16px;
                             color: #B2FFD6;
                             font-family: 'Space Mono', monospace;
                             font-style: italic;
 
                             @media (max-width: 1367px) and (orientation: landscape) {
-                                font-size: 18px;
+                                font-size: 16px;
                             }
 
                             @media (max-width: 1150px) and (orientation: landscape) {
@@ -278,13 +279,13 @@ const StyledExperience = styled.div`
 
                     p {
                         margin-block: 0px;
-                        font-size: 20px;
+                        font-size: 14px;
                         color: white;
                         font-family: 'Open Sans', sans-serif;
                         letter-spacing: 0.5px;
 
                         @media (max-width: 1367px) and (orientation: landscape) {
-                            font-size: 20px;
+                            font-size: 14px;
                         }
 
                         @media (max-width: 1150px) and (orientation: landscape) {
@@ -292,7 +293,7 @@ const StyledExperience = styled.div`
                         }
 
                         @media (orientation: portrait) and (max-width: 950px) {
-                            font-size: 15px;
+                            font-size: 14px;
                         }
 
                         @media (max-width: 450px) and (orientation: portrait) {
@@ -355,21 +356,20 @@ function Experience() {
                         <div className='name-date'>
                             <div className='name'>
                                 <div>
-                                    <p>Software Engineer</p>
+                                    <p>Software Engineer II</p>
                                 </div>
                                 <div>
-                                    <span>F2B Services</span>
+                                    <span>Analytic Partners, Inc.</span>
                                 </div>
                             </div>
                             <div className='date'>
-                                <p>August 2020 - Present</p>
+                                <p>March 2022 - Present</p>
                             </div>
                         </div>
                         <div className='description'>
                             <p>
-                                In my current position, I work within a small, tight-knit software team. Together we've created and maintained the company's portfolio of sales, training, 
-                                and event products, using technology like React/Redux, Node.js, .NET, AWS, and Firestore/Firebase. At F2B, I've cut my teeth in software,  and continue to learn
-                                more everyday - while making lifelong friends in the process.
+                                At AP, I work full stack in React front-end / Flask back-end as the pointman for two of the software products in our extensive market analytics catalogue.
+                                My responsibilites have me handling anything from UI work and unit testing all the way to database management and hosting/deployment - and I'm learning more everyday.
                             </p>
                         </div>
                     </div>
@@ -379,7 +379,30 @@ function Experience() {
                         <div className='name-date'>
                             <div className='name'>
                                 <div>
-                                    <p>Software Development Tutor</p>
+                                    <p>Software Developer</p>
+                                </div>
+                                <div>
+                                    <span>F2B Services</span>
+                                </div>
+                            </div>
+                            <div className='date'>
+                                <p>August 2020 - March 2022</p>
+                            </div>
+                        </div>
+                        <div className='description'>
+                            <p>
+                                On this small, tight-knit software team, we created and maintained the company's portfolio of sales, training, 
+                                and event products, using technology like React/Redux, Node.js, .NET, AWS, and Firestore/Firebase.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div className='job job-three' id='job-three' ref={refThree} onAnimationEnd={() => refThree.current.style.opacity = 1}>
+                    <div className='inner'>
+                        <div className='name-date'>
+                            <div className='name'>
+                                <div>
+                                    <p style={{fontStyle: 'italic'}}>Software Development Tutor</p>
                                 </div>
                                 <div>
                                     <span>2U, Inc.</span>
@@ -392,32 +415,7 @@ function Experience() {
                         <div className='description'>
                             <p>
                                 While working for 2U, I put my coding self-learning to good use to teach others the joys of software development. On any given week, I would be hosting anywhere
-                                from 1 to 20 hour-long coding tutorial sessions, helping bootcamp students with topics ranging anywhere from basic CSS to SQL, Node.js, or React. 
-                                They say the best way to learn is to teach - and so I learned quite a bit from this role.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div className='job job-three' id='job-three' ref={refThree} onAnimationEnd={() => refThree.current.style.opacity = 1}>
-                    <div className='inner'>
-                        <div className='name-date'>
-                            <div className='name'>
-                                <div>
-                                    <p style={{fontStyle: 'italic'}}>life before software...</p>
-                                </div>
-                                <div>
-                                    <span></span>
-                                </div>
-                            </div>
-                            <div className='date'>
-                                <p>Before 2018</p>
-                            </div>
-                        </div>
-                        <div className='description'>
-                            <p>
-                                Surprisingly enough, before I got interested in coding, I was doing legal work - I graduated with a Political Science degree and worked in law firms for
-                                close to two years. The story of that transition is a long one, but the attention to detail I gained from hours of preparing law suits and poring over court
-                                documents has been invaluable in my growth as a software engineer.
+                                from 1 to 20 hour-long coding tutorial sessions, helping bootcamp students with topics ranging anywhere from basic CSS to SQL, Node.js, or React.
                             </p>
                         </div>
                     </div>

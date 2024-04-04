@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import About from './components/About';
 import Experience from './components/Experience';
-import Portfolio from './components/Portfolio'
+// import Portfolio from './components/Portfolio'
 import Sidebar from './components/Sidebar';
 import Header from './components/Header';
 import Contact from './components/Contact';
@@ -60,12 +60,12 @@ const StyledSectionContainer = styled.div`
     top: 100vh;
   }
 
-  &.portfolio-toplevel {
-    top: 200vh;
-  }
+  // &.portfolio-toplevel {
+  //   top: 200vh;
+  // }
 
   &.contact-toplevel {
-    top: 300vh;
+    top: 200vh;
   }
 
   .content-container {
@@ -122,11 +122,11 @@ const App = () => {
             <Experience/>
           </div>
         </StyledSectionContainer>
-        <StyledSectionContainer id="portfolio" className='portfolio-toplevel'>
+        {/* <StyledSectionContainer id="portfolio" className='portfolio-toplevel'>
           <div className='content-container'>
             <Portfolio/>
           </div>
-        </StyledSectionContainer>
+        </StyledSectionContainer> */}
         <StyledSectionContainer id="contact" className='contact-toplevel'>
           <div className='content-container'>
             <Contact/>
